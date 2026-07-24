@@ -1,0 +1,549 @@
+openapi: 3.1.0
+info:
+  title: Loyalty Operations Customer Actions Customers API
+  version: 3.0.0
+  x-provenance:
+    generated: '2026-07-21'
+    method: searched
+    source: https://developers.stamped.io/reference/ (embedded OpenAPI per operation)
+  description: Stamped V3 Loyalty Operations API. Harvested by API Evangelist from the per-operation OpenAPI definitions published at https://developers.stamped.io/reference/.
+servers:
+- url: https://stamped.io
+security:
+- StampedApiKeyAuth: []
+tags:
+- name: Customers
+paths:
+  /api/v3/merchant/shops/{shopId}/customers:
+    parameters:
+    - name: shopId
+      in: path
+      description: ShopId (storeHash)
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Customers
+      summary: Create Customer
+      operationId: createCustomer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerRequest'
+    get:
+      parameters:
+      - name: shopifyId
+        in: query
+        description: If Shopify, a matching shopifyId
+        required: false
+        schema:
+          type: string
+      - name: bigcommerceId
+        in: query
+        description: If BigCommerce, a matching bigcommerceId
+        required: false
+        schema:
+          type: string
+      - name: customCustomerId
+        in: query
+        description: If other platform, a matching customCustomerId
+        required: false
+        schema:
+          type: string
+      - name: email
+        in: query
+        description: A begins with email match
+        required: false
+        schema:
+          type: string
+      - name: firstName
+        in: query
+        description: A begins with firstName match
+        required: false
+        schema:
+          type: string
+      - name: lastName
+        in: query
+        description: A begins with lastName match
+        required: false
+        schema:
+          type: string
+      - name: lastFirst
+        in: query
+        description: Match by lastName first
+        required: false
+        schema:
+          type: boolean
+      - name: datePlatformCreated
+        in: query
+        description: Date parsable minimum range
+        required: false
+        schema:
+          type: string
+      - name: datePlatformCreatedEnd
+        in: query
+        description: Date parsable maximum range
+        required: false
+        schema:
+          type: string
+      - name: reviewsMin
+        in: query
+        description: Minimum number of reviews range
+        required: false
+        schema:
+          type: number
+      - name: reviewsMax
+        in: query
+        description: Maximum number of reviews range
+        required: false
+        schema:
+          type: number
+      - name: pointsMin
+        in: query
+        description: Minimum number of points range
+        required: false
+        schema:
+          type: number
+      - name: pointsMax
+        in: query
+        description: Maximum number of points range
+        required: false
+        schema:
+          type: number
+      - name: vipTier
+        in: query
+        description: Matching vipTier
+        required: false
+        schema:
+          type: string
+      - name: tags
+        in: query
+        description: Customer tags
+        required: false
+        schema:
+          type: array
+          items:
+            type: string
+      tags:
+      - Customers
+      summary: Filter Customers
+      operationId: filterCustomers
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginatedCustomers'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+  /api/v3/merchant/shops/{shopId}/customers/{customerId}:
+    parameters:
+    - name: shopId
+      in: path
+      description: The shopId, or storeHash associated with Stamped account
+      required: true
+      schema:
+        type: string
+    - name: customerId
+      in: path
+      description: The customerId generated by Stamped on customer creation
+      required: true
+      schema:
+        type: string
+    delete:
+      tags:
+      - Customers
+      summary: Delete Customer
+      operationId: deleteCustomer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  softDelete:
+                    type: boolean
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+    get:
+      tags:
+      - Customers
+      summary: Get Customer
+      operationId: getCustomer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+    patch:
+      tags:
+      - Customers
+      summary: Update Customer
+      operationId: updateCustomer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerRequest'
+  /api/v3/merchant/shops/{shopId}/customers/lookup:
+    parameters:
+    - name: shopId
+      in: path
+      description: The shopId, or storeHash associated with Stamped account
+      required: true
+      schema:
+        type: string
+    - in: query
+      name: email
+      schema:
+        type: string
+      description: Email to lookup customer by
+    - in: query
+      name: customCustomerId
+      description: Custom CustomerId to lookup customer by
+      required: false
+      schema:
+        type: string
+    - in: query
+      name: shopifyId
+      description: If Shopify, a matching shopifyId
+      required: false
+      schema:
+        type: string
+    - in: query
+      name: bigcommerceId
+      description: If BigCommerce, a matching bigcommerceId
+      required: false
+      schema:
+        type: string
+    get:
+      tags:
+      - Customers
+      summary: Lookup Customer
+      operationId: lookupCustomer
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+        '500':
+          description: Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMessage'
+components:
+  schemas:
+    CustomerActivity:
+      type: object
+      properties:
+        vipTier:
+          type: string
+        dateVipTierUpdated:
+          type: string
+        totalPoints:
+          type: string
+        dateTotalPointsUpdated:
+          type: string
+        totalAffiliateOrders:
+          type: string
+        dateAffiliateOrdersUpdated:
+          type: string
+        totalReviews:
+          type: string
+        dateReviewsUpdated:
+          type: string
+    CustomerAddress:
+      type: object
+      properties:
+        label:
+          type: string
+        phone:
+          type: string
+        address1:
+          type: string
+        address2:
+          type: string
+        city:
+          type: string
+        province:
+          type: string
+        country:
+          type: string
+        countryCode:
+          type: string
+        zip:
+          type: string
+        default:
+          type: string
+    CustomerNotification:
+      type: object
+      properties:
+        notificationType:
+          type: string
+        referenceId:
+          type: string
+        dateNotified:
+          type: string
+    CustomerRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        customCustomerId:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        dateOfBirth:
+          type: string
+        datePlatformUpdated:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerAddress'
+    PaginatedCustomers:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        customers:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerResponse'
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    CustomerResponse:
+      type: object
+      properties:
+        customerId:
+          type: string
+        email:
+          type: string
+        accountId:
+          type: string
+        shopId:
+          type: string
+        shopifyId:
+          type: string
+        bigcommerceId:
+          type: string
+        customCustomerId:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        datePlatformUpdated:
+          type: string
+        datePlatformCreated:
+          type: string
+        dateStampedUpdated:
+          type: string
+        dateStampedCreated:
+          type: string
+        dateOfBirth:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        referralCode:
+          type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerAddress'
+        deleted:
+          type: string
+        dateDeleted:
+          type: string
+        notifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerNotification'
+        unsubscribed:
+          type: array
+          items:
+            type: string
+        activity:
+          $ref: '#/components/schemas/CustomerActivity'
+  securitySchemes:
+    StampedApiKeyAuth:
+      type: apiKey
+      in: header
+      name: stamped-api-key

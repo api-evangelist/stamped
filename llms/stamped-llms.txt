@@ -1,0 +1,38 @@
+# Stamped Documentation
+
+> Documentation for Stamped
+
+## Guides
+- [Stamped API Overview](https://developers.stamped.io/docs/getting-started.md): Stamped offers two versions of its API, each tailored for specific apps and platform capabilities.
+- [Understanding Stamped APIs](https://developers.stamped.io/docs/understanding-stamped-apis.md)
+- [Merchant APIs](https://developers.stamped.io/docs/merchant-apis.md)
+- [Loyalty APIs](https://developers.stamped.io/docs/loyalty-apis.md)
+- [Reviews APIs](https://developers.stamped.io/docs/reviews-apis.md)
+
+## API Reference
+- [Create Customer](https://developers.stamped.io/reference/createcustomer.md)
+- [Filter Customers](https://developers.stamped.io/reference/filtercustomers.md)
+- [Update Customer](https://developers.stamped.io/reference/updatecustomer.md)
+- [Get Customer](https://developers.stamped.io/reference/getcustomer.md)
+- [Delete Customer](https://developers.stamped.io/reference/deletecustomer.md)
+- [Lookup Customer](https://developers.stamped.io/reference/lookupcustomer.md)
+- [Create Product](https://developers.stamped.io/reference/createproduct.md)
+- [Filter Products](https://developers.stamped.io/reference/filterproducts.md)
+- [Update Product](https://developers.stamped.io/reference/updateproduct.md)
+- [Get Product](https://developers.stamped.io/reference/getproduct.md)
+- [Delete Product](https://developers.stamped.io/reference/deleteproduct.md)
+- [Lookup Product](https://developers.stamped.io/reference/lookupproduct.md)
+- [Create Order](https://developers.stamped.io/reference/createorder.md)
+- [Filter Orders](https://developers.stamped.io/reference/filterorders.md)
+- [Update Order](https://developers.stamped.io/reference/updateorder.md)
+- [Get Order](https://developers.stamped.io/reference/getorder.md)
+- [Delete Order](https://developers.stamped.io/reference/deleteorder.md)
+- [Lookup Order](https://developers.stamped.io/reference/lookuporder.md)
+- [Adjust Points](https://developers.stamped.io/reference/adjust-points.md)
+- [Adjust VIP Tier](https://developers.stamped.io/reference/loyalty-adjust-vip-tier.md)
+- [Redeem Reward](https://developers.stamped.io/reference/loyalty-redeem-reward.md)
+- [Void Coupon](https://developers.stamped.io/reference/loyalty-void-coupon.md)
+- [Trigger Activity](https://developers.stamped.io/reference/loyalty-trigger-activity.md)
+- [Create custom activity](https://developers.stamped.io/reference/loyalty-custom-activity.md)
+- [Filter Rewards](https://developers.stamped.io/reference/loyalty-reports-rewards.md)
+- [Filter Activities](https://developers.stamped.io/reference/loyalty-reports-activities.md)

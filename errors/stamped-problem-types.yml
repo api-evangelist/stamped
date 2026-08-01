@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/stamped-merchant-data-openapi.json, openapi/stamped-loyalty-operations-openapi.json
+format: custom
+envelope:
+  schema: '#/components/schemas/ErrorMessage'
+  fields:
+    message: Human-readable error description
+note: >-
+  Stamped V3 returns a simple JSON error envelope ({ "message": string }) rather
+  than RFC 9457 problem+json. The status codes below are derived from the 4xx/5xx
+  responses declared across the Merchant Data and Loyalty Operations specs.
+problems:
+  - status: 400
+    title: Bad Request
+    description: The request was malformed or failed validation.
+    envelope: ErrorMessage
+  - status: 401
+    title: Unauthorized
+    description: >-
+      Missing or invalid credentials. Supply a valid Private API Key in the
+      stamped-api-key header and the correct shopId (storeHash).
+    envelope: ErrorMessage
+  - status: 404
+    title: Not Found
+    description: The requested shop or record does not exist.
+    envelope: ErrorMessage
+  - status: 500
+    title: Server Error
+    description: An unexpected error occurred on the Stamped platform.
+    envelope: ErrorMessage

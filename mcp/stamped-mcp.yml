@@ -1,0 +1,88 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/stamped-merchant-data-openapi.json, openapi/stamped-loyalty-operations-openapi.json
+note: No official hosted Stamped MCP server was found. Candidate tool list derived one-per-operation from
+  the published V3 OpenAPI.
+server:
+  name: stamped
+  transport: stdio
+tools:
+- name: createCustomer
+  description: Create Customer
+  source_operation: openapi/stamped-merchant-data-openapi.json#createCustomer
+- name: filterCustomers
+  description: Filter Customers
+  source_operation: openapi/stamped-merchant-data-openapi.json#filterCustomers
+- name: createOrder
+  description: Create Order
+  source_operation: openapi/stamped-merchant-data-openapi.json#createOrder
+- name: filterOrders
+  description: Filter Orders
+  source_operation: openapi/stamped-merchant-data-openapi.json#filterOrders
+- name: createProduct
+  description: Create Product
+  source_operation: openapi/stamped-merchant-data-openapi.json#createProduct
+- name: filterProducts
+  description: Filter Products
+  source_operation: openapi/stamped-merchant-data-openapi.json#filterProducts
+- name: deleteCustomer
+  description: Delete Customer
+  source_operation: openapi/stamped-merchant-data-openapi.json#deleteCustomer
+- name: getCustomer
+  description: Get Customer
+  source_operation: openapi/stamped-merchant-data-openapi.json#getCustomer
+- name: updateCustomer
+  description: Update Customer
+  source_operation: openapi/stamped-merchant-data-openapi.json#updateCustomer
+- name: deleteOrder
+  description: Delete Order
+  source_operation: openapi/stamped-merchant-data-openapi.json#deleteOrder
+- name: getOrder
+  description: Get Order
+  source_operation: openapi/stamped-merchant-data-openapi.json#getOrder
+- name: updateOrder
+  description: Update Order
+  source_operation: openapi/stamped-merchant-data-openapi.json#updateOrder
+- name: deleteProduct
+  description: Delete Product
+  source_operation: openapi/stamped-merchant-data-openapi.json#deleteProduct
+- name: getProduct
+  description: Get Product
+  source_operation: openapi/stamped-merchant-data-openapi.json#getProduct
+- name: updateProduct
+  description: Update Product
+  source_operation: openapi/stamped-merchant-data-openapi.json#updateProduct
+- name: lookupCustomer
+  description: Lookup Customer
+  source_operation: openapi/stamped-merchant-data-openapi.json#lookupCustomer
+- name: lookupOrder
+  description: Lookup Order
+  source_operation: openapi/stamped-merchant-data-openapi.json#lookupOrder
+- name: lookupProduct
+  description: Lookup Product
+  source_operation: openapi/stamped-merchant-data-openapi.json#lookupProduct
+- name: adjust-points
+  description: Adjust Points
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#adjust-points
+- name: loyalty-adjust-vip-tier
+  description: Adjust VIP Tier
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-adjust-vip-tier
+- name: loyalty-custom-activity
+  description: Create custom activity
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-custom-activity
+- name: loyalty-reports-activities
+  description: Filter Activities
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-reports-activities
+- name: loyalty-redeem-reward
+  description: Redeem Reward
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-redeem-reward
+- name: loyalty-reports-rewards
+  description: Filter Rewards
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-reports-rewards
+- name: loyalty-trigger-activity
+  description: Trigger Activity
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-trigger-activity
+- name: loyalty-void-coupon
+  description: Void Coupon
+  source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-void-coupon

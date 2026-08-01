@@ -1,0 +1,12 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/stamped-merchant-data-openapi.json, openapi/stamped-loyalty-operations-openapi.json
+skills:
+  - file: stamped-sync-merchant-records.md
+    name: Sync Stamped merchant records
+    api: openapi/stamped-merchant-data-openapi.json
+    operations: [createCustomer, createProduct, createOrder, lookupCustomer, lookupOrder, filterCustomers]
+  - file: stamped-loyalty-points-and-rewards.md
+    name: Adjust Stamped loyalty points and redeem rewards
+    api: openapi/stamped-loyalty-operations-openapi.json
+    operations: [adjust-points, loyalty-trigger-activity, loyalty-redeem-reward, loyalty-void-coupon, loyalty-reports-rewards, loyalty-reports-activities]

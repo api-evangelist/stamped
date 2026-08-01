@@ -1,0 +1,22 @@
+{
+  "provider": "stamped",
+  "sources": [
+    "stamped-customer-actions-api-openapi.yml",
+    "stamped-customers-api-openapi.yml",
+    "stamped-orders-api-openapi.yml",
+    "stamped-products-api-openapi.yml",
+    "stamped-program-reporting-api-openapi.yml"
+  ],
+  "outputs": [
+    "stamped-customer-actions-api-openapi.yml",
+    "stamped-customers-api-openapi.yml",
+    "stamped-orders-api-openapi.yml",
+    "stamped-products-api-openapi.yml",
+    "stamped-program-reporting-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

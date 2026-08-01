@@ -1,0 +1,11 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Stamped Merchant Data
+  version: 1.0.0
+extends: openapi/stamped-merchant-data-openapi.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-source: https://developers.stamped.io/reference/
+    x-apievangelist-harvest: per-operation OpenAPI merged by API Evangelist
+    x-apievangelist-auth: apiKey header stamped-api-key + shopId path param

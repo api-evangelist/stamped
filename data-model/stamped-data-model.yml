@@ -1,0 +1,60 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/stamped-merchant-data-openapi.json, openapi/stamped-loyalty-operations-openapi.json
+description: >-
+  Entity-relationship graph derived from the Stamped V3 Merchant Data and
+  Loyalty Operations OpenAPI schemas ($ref links + id-reference fields).
+entities:
+  - name: Customer
+    id_field: customerId
+    schema: openapi/stamped-merchant-data-openapi.json#/components/schemas/CustomerResponse
+    external_ids: [shopifyId, bigcommerceId, customCustomerId]
+  - name: Product
+    id_field: productId
+    schema: openapi/stamped-merchant-data-openapi.json#/components/schemas/ProductResponse
+    external_ids: [shopifyId, bigcommerceId, customProductId]
+  - name: Order
+    id_field: orderId
+    schema: openapi/stamped-merchant-data-openapi.json#/components/schemas/OrderResponse
+    external_ids: [shopifyId, bigcommerceId, customOrderId]
+  - name: CartItem
+    schema: openapi/stamped-merchant-data-openapi.json#/components/schemas/CartItem
+  - name: Activity
+    id_field: activityId
+    schema: openapi/stamped-loyalty-operations-openapi.json#/components/schemas/ActivityResponse
+  - name: Reward
+    id_field: rewardId
+    schema: openapi/stamped-loyalty-operations-openapi.json#/components/schemas/RewardResponse
+relationships:
+  - from: Order
+    to: Customer
+    type: belongs_to
+    via: customerId
+  - from: Order
+    to: CartItem
+    type: has_many
+    via: orderEntries/cartStates.lineItems
+  - from: CartItem
+    to: Product
+    type: belongs_to
+    via: productId
+  - from: Customer
+    to: Activity
+    type: has_many
+    via: activity
+  - from: Activity
+    to: Customer
+    type: belongs_to
+    via: customerId
+  - from: Reward
+    to: Customer
+    type: belongs_to
+    via: customerId
+  - from: Reward
+    to: Activity
+    type: belongs_to
+    via: activityId
+notes:
+  - All records are scoped to a shop via the shopId (storeHash) path parameter.
+  - On Shopify/BigCommerce the platform is the source of truth; Merchant records
+    sync automatically and are effectively read-only.

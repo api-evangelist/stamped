@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/stamped-merchant-data-openapi.json, openapi/stamped-loyalty-operations-openapi.json
+standards:
+  - id: openapi-3.1
+    conforms: true
+    evidence: Per-operation OpenAPI 3.1.0 definitions published at developers.stamped.io/reference
+  - id: rest
+    conforms: true
+    evidence: Resource-oriented /api/v3/merchant and /api/v3/loyalty paths with standard HTTP verbs
+  - id: oauth2
+    conforms: false
+    evidence: Auth is a private API key (stamped-api-key header), not OAuth2
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a simple { "message" } envelope, not application/problem+json
+  - id: pagination
+    conforms: true
+    evidence: Page-number pagination (page/limit/morePages) on collection endpoints
+  - id: idempotency
+    conforms: false
+    evidence: No idempotency-key mechanism documented

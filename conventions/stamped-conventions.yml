@@ -1,0 +1,47 @@
+generated: '2026-07-21'
+method: derived
+source: https://developers.stamped.io/docs/getting-started, openapi/stamped-merchant-data-openapi.json, openapi/stamped-loyalty-operations-openapi.json
+description: >-
+  Cross-cutting request/response conventions for the Stamped V3 API, derived from
+  the published OpenAPI and the getting-started guide.
+authentication:
+  style: api-key
+  header: stamped-api-key
+  scope: shop
+  notes: >-
+    Every request also carries a shopId (ShopId / storeHash) path parameter. The
+    Private API Key is server-side only. See authentication/stamped-authentication.yml.
+idempotency:
+  supported: false
+  notes: No idempotency-key mechanism is documented for the Stamped V3 API.
+pagination:
+  style: page-number
+  params:
+    page: 1-based page number (Loyalty reporting endpoints)
+    limit: page size (Loyalty reporting endpoints)
+  response_fields:
+    page: current page number
+    limit: page size
+    morePages: boolean, whether further pages exist
+    subset: boolean, whether the result is a filtered subset
+  wrapper_schemas: [PaginatedCustomers, PaginatedOrders, PaginatedProducts, PaginatedActivities, PaginatedRewards]
+versioning:
+  style: uri-path
+  current: v3
+  legacy: v2
+  notes: >-
+    /api/v3/ is the current path prefix (Loyalty 2.0 on Shopify, BigCommerce and
+    Custom Platforms). The V2 API remains in use for the Reviews app and Loyalty
+    1.0 shops. See lifecycle/stamped-lifecycle.yml.
+error_envelope:
+  shape: '{ "message": string }'
+  rfc9457: false
+  ref: errors/stamped-problem-types.yml
+rate_limiting:
+  signaled: false
+  notes: No rate-limit headers or policy are documented in the V3 reference.
+external_id_mapping:
+  notes: >-
+    Records carry platform-native identifiers (shopifyId, bigcommerceId) plus a
+    customCustomerId / customProductId / customOrderId for headless/custom
+    platforms, alongside the Stamped-generated id and lookup endpoints.

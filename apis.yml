@@ -1,7 +1,27 @@
 aid: stamped
-name: Stamped *
-description: 'Stamped * is a company surfaced as a portfolio company of gv and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stamped.png
+name: Stamped
+description: >-
+  Stamped is a reviews, ratings, and loyalty platform for e-commerce brands on
+  Shopify, BigCommerce, and custom/headless platforms. Its V3 API is organized
+  into three domains: Merchant Data (customers, products, orders), Loyalty
+  Operations (points adjustments, VIP tiers, reward redemption, activities, and
+  program reporting), and Reviews. Authentication is a shop-scoped Private API
+  Key sent in the stamped-api-key header. Surfaced as a portfolio company of GV
+  and enriched by the API Evangelist pipeline from Stamped's public developer
+  documentation at developers.stamped.io.
 url: https://raw.githubusercontent.com/api-evangelist/stamped/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,16 +31,111 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Consumer
-apis: []
+- Reviews
+- Ratings
+- Loyalty
+- E-Commerce
+- Customer Marketing
+- Shopify
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: stamped:stamped-customer-actions-api
+  name: Stamped Customer Actions API
+  description: The Customer Actions API from Stamped — 6 operation(s) for customer actions.
+  humanURL: https://developers.stamped.io/docs/merchant-apis
+  baseURL: https://stamped.io/api/v3/merchant
+  tags:
+  - Customer Actions
+  properties:
+  - type: OpenAPI
+    url: openapi/stamped-customer-actions-api-openapi.yml
+- aid: stamped:stamped-customers-api
+  name: Stamped Customers API
+  description: The Customers API from Stamped — 3 operation(s) for customers.
+  humanURL: https://developers.stamped.io/docs/merchant-apis
+  baseURL: https://stamped.io/api/v3/merchant
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/stamped-customers-api-openapi.yml
+- aid: stamped:stamped-orders-api
+  name: Stamped Orders API
+  description: The Orders API from Stamped — 3 operation(s) for orders.
+  humanURL: https://developers.stamped.io/docs/merchant-apis
+  baseURL: https://stamped.io/api/v3/merchant
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/stamped-orders-api-openapi.yml
+- aid: stamped:stamped-products-api
+  name: Stamped Products API
+  description: The Products API from Stamped — 3 operation(s) for products.
+  humanURL: https://developers.stamped.io/docs/merchant-apis
+  baseURL: https://stamped.io/api/v3/merchant
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/stamped-products-api-openapi.yml
+- aid: stamped:stamped-program-reporting-api
+  name: Stamped Program Reporting API
+  description: The Program Reporting API from Stamped — 2 operation(s) for program reporting.
+  humanURL: https://developers.stamped.io/docs/merchant-apis
+  baseURL: https://stamped.io/api/v3/merchant
+  tags:
+  - Program Reporting
+  properties:
+  - type: OpenAPI
+    url: openapi/stamped-program-reporting-api-openapi.yml
 common:
+- type: DomainSecurity
+  url: security/stamped-domain-security.yml
 - type: Website
-  url: http://stamped.com
+  url: https://stamped.io
+- type: DeveloperPortal
+  url: https://developers.stamped.io
+- type: Documentation
+  url: https://developers.stamped.io/docs/getting-started
+- type: APIReference
+  url: https://developers.stamped.io/reference/
+- type: GettingStarted
+  url: https://developers.stamped.io/docs/getting-started
+- type: Support
+  url: https://stampedsupport.zendesk.com/hc/en-us
+- type: LLMsTxt
+  url: llms/stamped-llms.txt
+- type: Authentication
+  url: authentication/stamped-authentication.yml
+- type: AgenticAccess
+  url: agentic-access/stamped-agentic-access.yml
+- type: Conventions
+  url: conventions/stamped-conventions.yml
+- type: ErrorCatalog
+  url: errors/stamped-problem-types.yml
+- type: DataModel
+  url: data-model/stamped-data-model.yml
+- type: MCPServer
+  url: mcp/stamped-mcp.yml
+- type: Conformance
+  url: conformance/stamped-conformance.yml
+- type: Lifecycle
+  url: lifecycle/stamped-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/stamped-lifecycle.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 18
+  pass: local-v1

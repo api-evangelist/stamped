@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.stamped.io/docs/getting-started, https://developers.stamped.io/docs/understanding-stamped-apis
+description: Versioning and deprecation posture for the Stamped API.
+versioning:
+  scheme: uri-path
+  current: v3
+  versions:
+    - version: v3
+      status: current
+      scope: Loyalty 2.0 (Shopify, BigCommerce, Custom Platforms)
+    - version: v2
+      status: active-deprecating
+      scope: Reviews app (all platforms) and Loyalty 1.0 shops
+deprecation:
+  policy_url: https://developers.stamped.io/docs/getting-started
+  documented: true
+  notes: >-
+    The V2 API is documented as scheduled for deprecation once the V3 Reviews API
+    is released. No RFC 8594 Sunset/Deprecation header support is documented.
+status_page: null
+sla: null
+deprecated_operations: []

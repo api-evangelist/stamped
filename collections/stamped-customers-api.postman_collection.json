@@ -1,0 +1,2787 @@
+{
+  "item": [
+    {
+      "id": "e122e112-1435-4dea-8d88-8f9e2c915c33",
+      "name": "Customers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5c3d7924-c45a-455b-a289-904f2ff7c336",
+          "name": "Create Customer",
+          "request": {
+            "name": "Create Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "customers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) ShopId (storeHash)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address1\": \"<string>\",\n      \"address2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"province\": \"<string>\",\n      \"country\": \"<string>\",\n      \"countryCode\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"default\": \"<string>\"\n    },\n    {\n      \"label\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address1\": \"<string>\",\n      \"address2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"province\": \"<string>\",\n      \"country\": \"<string>\",\n      \"countryCode\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"default\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6806e9e6-465f-4f04-8eb2-08542af1b53d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"customerId\": \"string\",\n  \"email\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customCustomerId\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateOfBirth\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"referralCode\": \"string\",\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ],\n  \"deleted\": \"string\",\n  \"dateDeleted\": \"string\",\n  \"notifications\": [\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    },\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    }\n  ],\n  \"unsubscribed\": [\n    \"string\",\n    \"string\"\n  ],\n  \"activity\": {\n    \"vipTier\": \"string\",\n    \"dateVipTierUpdated\": \"string\",\n    \"totalPoints\": \"string\",\n    \"dateTotalPointsUpdated\": \"string\",\n    \"totalAffiliateOrders\": \"string\",\n    \"dateAffiliateOrdersUpdated\": \"string\",\n    \"totalReviews\": \"string\",\n    \"dateReviewsUpdated\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "730f098f-c399-48eb-b857-f46957de6dc5",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0ddd60b5-d3a1-4d87-ac59-2f1880365195",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e770bb75-c7d4-49d7-a0e7-2d783d70bf3f",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "13326829-9f76-4679-b123-19da75d91583",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "59974dec-79e8-4b8d-a92e-53e31999d32e",
+          "name": "Filter Customers",
+          "request": {
+            "name": "Filter Customers",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "customers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "shopifyId",
+                  "value": "<string>",
+                  "description": "If Shopify, a matching shopifyId"
+                },
+                {
+                  "disabled": false,
+                  "key": "bigcommerceId",
+                  "value": "<string>",
+                  "description": "If BigCommerce, a matching bigcommerceId"
+                },
+                {
+                  "disabled": false,
+                  "key": "customCustomerId",
+                  "value": "<string>",
+                  "description": "If other platform, a matching customCustomerId"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>",
+                  "description": "A begins with email match"
+                },
+                {
+                  "disabled": false,
+                  "key": "firstName",
+                  "value": "<string>",
+                  "description": "A begins with firstName match"
+                },
+                {
+                  "disabled": false,
+                  "key": "lastName",
+                  "value": "<string>",
+                  "description": "A begins with lastName match"
+                },
+                {
+                  "disabled": false,
+                  "key": "lastFirst",
+                  "value": "<boolean>",
+                  "description": "Match by lastName first"
+                },
+                {
+                  "disabled": false,
+                  "key": "datePlatformCreated",
+                  "value": "<string>",
+                  "description": "Date parsable minimum range"
+                },
+                {
+                  "disabled": false,
+                  "key": "datePlatformCreatedEnd",
+                  "value": "<string>",
+                  "description": "Date parsable maximum range"
+                },
+                {
+                  "disabled": false,
+                  "key": "reviewsMin",
+                  "value": "<number>",
+                  "description": "Minimum number of reviews range"
+                },
+                {
+                  "disabled": false,
+                  "key": "reviewsMax",
+                  "value": "<number>",
+                  "description": "Maximum number of reviews range"
+                },
+                {
+                  "disabled": false,
+                  "key": "pointsMin",
+                  "value": "<number>",
+                  "description": "Minimum number of points range"
+                },
+                {
+                  "disabled": false,
+                  "key": "pointsMax",
+                  "value": "<number>",
+                  "description": "Maximum number of points range"
+                },
+                {
+                  "disabled": false,
+                  "key": "vipTier",
+                  "value": "<string>",
+                  "description": "Matching vipTier"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "<string>",
+                  "description": "Customer tags"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "<string>",
+                  "description": "Customer tags"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) ShopId (storeHash)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3f3090fe-af84-4624-a55a-d1dd9b477e99",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "firstName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastFirst",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "datePlatformCreated",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "datePlatformCreatedEnd",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "reviewsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "reviewsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "vipTier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"page\": 9452.835396425986,\n  \"limit\": 2656.188805639209,\n  \"morePages\": true,\n  \"subset\": true,\n  \"customers\": [\n    {\n      \"customerId\": \"string\",\n      \"email\": \"string\",\n      \"accountId\": \"string\",\n      \"shopId\": \"string\",\n      \"shopifyId\": \"string\",\n      \"bigcommerceId\": \"string\",\n      \"customCustomerId\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"datePlatformUpdated\": \"string\",\n      \"datePlatformCreated\": \"string\",\n      \"dateStampedUpdated\": \"string\",\n      \"dateStampedCreated\": \"string\",\n      \"dateOfBirth\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"referralCode\": \"string\",\n      \"addresses\": [\n        {\n          \"label\": \"string\",\n          \"phone\": \"string\",\n          \"address1\": \"string\",\n          \"address2\": \"string\",\n          \"city\": \"string\",\n          \"province\": \"string\",\n          \"country\": \"string\",\n          \"countryCode\": \"string\",\n          \"zip\": \"string\",\n          \"default\": \"string\"\n        },\n        {\n          \"label\": \"string\",\n          \"phone\": \"string\",\n          \"address1\": \"string\",\n          \"address2\": \"string\",\n          \"city\": \"string\",\n          \"province\": \"string\",\n          \"country\": \"string\",\n          \"countryCode\": \"string\",\n          \"zip\": \"string\",\n          \"default\": \"string\"\n        }\n      ],\n      \"deleted\": \"string\",\n      \"dateDeleted\": \"string\",\n      \"notifications\": [\n        {\n          \"notificationType\": \"string\",\n          \"referenceId\": \"string\",\n          \"dateNotified\": \"string\"\n        },\n        {\n          \"notificationType\": \"string\",\n          \"referenceId\": \"string\",\n          \"dateNotified\": \"string\"\n        }\n      ],\n      \"unsubscribed\": [\n        \"string\",\n        \"string\"\n      ],\n      \"activity\": {\n        \"vipTier\": \"string\",\n        \"dateVipTierUpdated\": \"string\",\n        \"totalPoints\": \"string\",\n        \"dateTotalPointsUpdated\": \"string\",\n        \"totalAffiliateOrders\": \"string\",\n        \"dateAffiliateOrdersUpdated\": \"string\",\n        \"totalReviews\": \"string\",\n        \"dateReviewsUpdated\": \"string\"\n      }\n    },\n    {\n      \"customerId\": \"string\",\n      \"email\": \"string\",\n      \"accountId\": \"string\",\n      \"shopId\": \"string\",\n      \"shopifyId\": \"string\",\n      \"bigcommerceId\": \"string\",\n      \"customCustomerId\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"datePlatformUpdated\": \"string\",\n      \"datePlatformCreated\": \"string\",\n      \"dateStampedUpdated\": \"string\",\n      \"dateStampedCreated\": \"string\",\n      \"dateOfBirth\": \"string\",\n      \"tags\": [\n        \"string\",\n        \"string\"\n      ],\n      \"referralCode\": \"string\",\n      \"addresses\": [\n        {\n          \"label\": \"string\",\n          \"phone\": \"string\",\n          \"address1\": \"string\",\n          \"address2\": \"string\",\n          \"city\": \"string\",\n          \"province\": \"string\",\n          \"country\": \"string\",\n          \"countryCode\": \"string\",\n          \"zip\": \"string\",\n          \"default\": \"string\"\n        },\n        {\n          \"label\": \"string\",\n          \"phone\": \"string\",\n          \"address1\": \"string\",\n          \"address2\": \"string\",\n          \"city\": \"string\",\n          \"province\": \"string\",\n          \"country\": \"string\",\n          \"countryCode\": \"string\",\n          \"zip\": \"string\",\n          \"default\": \"string\"\n        }\n      ],\n      \"deleted\": \"string\",\n      \"dateDeleted\": \"string\",\n      \"notifications\": [\n        {\n          \"notificationType\": \"string\",\n          \"referenceId\": \"string\",\n          \"dateNotified\": \"string\"\n        },\n        {\n          \"notificationType\": \"string\",\n          \"referenceId\": \"string\",\n          \"dateNotified\": \"string\"\n        }\n      ],\n      \"unsubscribed\": [\n        \"string\",\n        \"string\"\n      ],\n      \"activity\": {\n        \"vipTier\": \"string\",\n        \"dateVipTierUpdated\": \"string\",\n        \"totalPoints\": \"string\",\n        \"dateTotalPointsUpdated\": \"string\",\n        \"totalAffiliateOrders\": \"string\",\n        \"dateAffiliateOrdersUpdated\": \"string\",\n        \"totalReviews\": \"string\",\n        \"dateReviewsUpdated\": \"string\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "70a12f73-5e88-4e26-b7ad-1668d7e4b910",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "firstName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastFirst",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "datePlatformCreated",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "datePlatformCreatedEnd",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "reviewsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "reviewsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "vipTier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0c478608-9f32-4feb-a3e2-b94907bdb106",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "firstName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastFirst",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "datePlatformCreated",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "datePlatformCreatedEnd",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "reviewsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "reviewsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "vipTier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "24e7fb04-7beb-4218-965d-45ae55f7e3ce",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "firstName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastFirst",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "datePlatformCreated",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "datePlatformCreatedEnd",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "reviewsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "reviewsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "vipTier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "af26f84b-ab7b-4503-b246-6cbe5d753b03",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "firstName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lastFirst",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "datePlatformCreated",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "datePlatformCreatedEnd",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "reviewsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "reviewsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMin",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "pointsMax",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "vipTier",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d74490a2-6f2d-47a9-ae56-e8e673c6a84d",
+          "name": "Delete Customer",
+          "request": {
+            "name": "Delete Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "customers",
+                ":customerId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customerId",
+                  "description": "(Required) The customerId generated by Stamped on customer creation"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "483c16af-7a37-4c24-8f05-8c4c6866c320",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"softDelete\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d9a07c06-d347-4281-b2ee-94a5eed5b592",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f7fd3ca3-7045-406d-96e9-100b1f598bcc",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8cf47165-c289-41cc-a9e5-7942bacc3c44",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93bfef29-062c-4ba4-982c-7472b4cad18a",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0446bc30-b51e-43e4-9f6d-78d4d7eaa24c",
+          "name": "Get Customer",
+          "request": {
+            "name": "Get Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "customers",
+                ":customerId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customerId",
+                  "description": "(Required) The customerId generated by Stamped on customer creation"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1629f614-984c-409c-9a70-6e389da0ca16",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"customerId\": \"string\",\n  \"email\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customCustomerId\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateOfBirth\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"referralCode\": \"string\",\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ],\n  \"deleted\": \"string\",\n  \"dateDeleted\": \"string\",\n  \"notifications\": [\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    },\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    }\n  ],\n  \"unsubscribed\": [\n    \"string\",\n    \"string\"\n  ],\n  \"activity\": {\n    \"vipTier\": \"string\",\n    \"dateVipTierUpdated\": \"string\",\n    \"totalPoints\": \"string\",\n    \"dateTotalPointsUpdated\": \"string\",\n    \"totalAffiliateOrders\": \"string\",\n    \"dateAffiliateOrdersUpdated\": \"string\",\n    \"totalReviews\": \"string\",\n    \"dateReviewsUpdated\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ada32912-5e63-44b7-bc62-6c65c9daf5be",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0cb74ece-ae31-4e1f-8b39-061afbf23c64",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a0a169ae-9200-4539-baa9-0f9b39a9a949",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "792a318e-c4d3-42d2-83f6-3471f64af187",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ceb961d0-6199-4b2f-905e-006671c37d14",
+          "name": "Update Customer",
+          "request": {
+            "name": "Update Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "customers",
+                ":customerId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "customerId",
+                  "description": "(Required) The customerId generated by Stamped on customer creation"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address1\": \"<string>\",\n      \"address2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"province\": \"<string>\",\n      \"country\": \"<string>\",\n      \"countryCode\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"default\": \"<string>\"\n    },\n    {\n      \"label\": \"<string>\",\n      \"phone\": \"<string>\",\n      \"address1\": \"<string>\",\n      \"address2\": \"<string>\",\n      \"city\": \"<string>\",\n      \"province\": \"<string>\",\n      \"country\": \"<string>\",\n      \"countryCode\": \"<string>\",\n      \"zip\": \"<string>\",\n      \"default\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7717157b-5791-4dbc-a3eb-2f4b0297bf4e",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"customerId\": \"string\",\n  \"email\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customCustomerId\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateOfBirth\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"referralCode\": \"string\",\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ],\n  \"deleted\": \"string\",\n  \"dateDeleted\": \"string\",\n  \"notifications\": [\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    },\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    }\n  ],\n  \"unsubscribed\": [\n    \"string\",\n    \"string\"\n  ],\n  \"activity\": {\n    \"vipTier\": \"string\",\n    \"dateVipTierUpdated\": \"string\",\n    \"totalPoints\": \"string\",\n    \"dateTotalPointsUpdated\": \"string\",\n    \"totalAffiliateOrders\": \"string\",\n    \"dateAffiliateOrdersUpdated\": \"string\",\n    \"totalReviews\": \"string\",\n    \"dateReviewsUpdated\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e322b1c2-23c0-49a8-8a15-e0b63fe50e5e",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "82a032d6-5a33-4ab8-b34f-db70393cc6a1",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "efa4e7d3-3b8d-424b-89d6-5fea4020c868",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0fffcc14-e345-4c56-adaa-9f692fd3145f",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    ":customerId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "customerId",
+                      "description": "(Required) The customerId generated by Stamped on customer creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"dateOfBirth\": \"<string>\",\n  \"datePlatformUpdated\": \"<string>\",\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "292067d8-10b9-430e-b855-8e812c4e7f45",
+          "name": "Lookup Customer",
+          "request": {
+            "name": "Lookup Customer",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "customers",
+                "lookup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "<string>",
+                  "description": "Email to lookup customer by"
+                },
+                {
+                  "disabled": false,
+                  "key": "customCustomerId",
+                  "value": "<string>",
+                  "description": "Custom CustomerId to lookup customer by"
+                },
+                {
+                  "disabled": false,
+                  "key": "shopifyId",
+                  "value": "<string>",
+                  "description": "If Shopify, a matching shopifyId"
+                },
+                {
+                  "disabled": false,
+                  "key": "bigcommerceId",
+                  "value": "<string>",
+                  "description": "If BigCommerce, a matching bigcommerceId"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "59cc1389-843c-4f41-932f-097fe1cc0137",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"customerId\": \"string\",\n  \"email\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customCustomerId\": \"string\",\n  \"firstName\": \"string\",\n  \"lastName\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateOfBirth\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ],\n  \"referralCode\": \"string\",\n  \"addresses\": [\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    },\n    {\n      \"label\": \"string\",\n      \"phone\": \"string\",\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"city\": \"string\",\n      \"province\": \"string\",\n      \"country\": \"string\",\n      \"countryCode\": \"string\",\n      \"zip\": \"string\",\n      \"default\": \"string\"\n    }\n  ],\n  \"deleted\": \"string\",\n  \"dateDeleted\": \"string\",\n  \"notifications\": [\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    },\n    {\n      \"notificationType\": \"string\",\n      \"referenceId\": \"string\",\n      \"dateNotified\": \"string\"\n    }\n  ],\n  \"unsubscribed\": [\n    \"string\",\n    \"string\"\n  ],\n  \"activity\": {\n    \"vipTier\": \"string\",\n    \"dateVipTierUpdated\": \"string\",\n    \"totalPoints\": \"string\",\n    \"dateTotalPointsUpdated\": \"string\",\n    \"totalAffiliateOrders\": \"string\",\n    \"dateAffiliateOrdersUpdated\": \"string\",\n    \"totalReviews\": \"string\",\n    \"dateReviewsUpdated\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c40d6d53-c2e8-4117-a86c-6d007fdfdb00",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d1a28c32-2137-4989-a6c2-00ae1007c74f",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "030ad51b-8a71-435d-b6e8-b4e0bfc42fa2",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1b923dda-1296-4911-8764-b87855676a4a",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "customers",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "email",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "customCustomerId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://stamped.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "stamped-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1711e5f1-539c-48bd-89c2-4edaaad250ed",
+    "name": "Loyalty Operations Customer Actions Customers API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Stamped V3 Loyalty Operations API. Harvested by API Evangelist from the per-operation OpenAPI definitions published at https://developers.stamped.io/reference/.",
+      "type": "text/plain"
+    }
+  }
+}

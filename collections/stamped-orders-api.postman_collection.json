@@ -1,0 +1,2339 @@
+{
+  "item": [
+    {
+      "id": "09afba82-e5bf-497d-8afa-1564b4047b19",
+      "name": "Orders",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5361a964-3525-474e-8f45-48f166d2da8f",
+          "name": "Create Order",
+          "request": {
+            "name": "Create Order",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) ShopId (storeHash)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customOrderId\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"cart\": {\n    \"lineItems\": [\n      {\n        \"productId\": \"<string>\",\n        \"variantId\": \"<string>\",\n        \"customProductId\": \"<string>\",\n        \"customVariantId\": \"<string>\",\n        \"name\": \"<string>\",\n        \"giftCard\": \"<string>\",\n        \"quantity\": \"<string>\",\n        \"sku\": \"<string>\",\n        \"title\": \"<string>\",\n        \"variantTitle\": \"<string>\",\n        \"fulfillmentStatus\": \"<string>\",\n        \"price\": \"<string>\",\n        \"taxable\": \"<string>\"\n      },\n      {\n        \"productId\": \"<string>\",\n        \"variantId\": \"<string>\",\n        \"customProductId\": \"<string>\",\n        \"customVariantId\": \"<string>\",\n        \"name\": \"<string>\",\n        \"giftCard\": \"<string>\",\n        \"quantity\": \"<string>\",\n        \"sku\": \"<string>\",\n        \"title\": \"<string>\",\n        \"variantTitle\": \"<string>\",\n        \"fulfillmentStatus\": \"<string>\",\n        \"price\": \"<string>\",\n        \"taxable\": \"<string>\"\n      }\n    ],\n    \"financialStatus\": \"<string>\",\n    \"fulfillmentStatus\": \"<string>\",\n    \"discountsApplied\": [\n      {\n        \"code\": \"<string>\",\n        \"amount\": \"<string>\",\n        \"type\": \"<string>\"\n      },\n      {\n        \"code\": \"<string>\",\n        \"amount\": \"<string>\",\n        \"type\": \"<string>\"\n      }\n    ],\n    \"shopCurrency\": \"<string>\",\n    \"shopPriceDiscountTotal\": \"<string>\",\n    \"shopPriceItemsTotal\": \"<string>\",\n    \"shopPriceSubTotal\": \"<string>\",\n    \"shopPriceTotal\": \"<string>\",\n    \"shopPriceShipping\": \"<string>\",\n    \"shopPriceTax\": \"<string>\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d61b9e77-902e-467c-9683-8d8bcb0765e4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customOrderId\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"cart\": {\n    \"lineItems\": [\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      },\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      }\n    ],\n    \"financialStatus\": \"string\",\n    \"fulfillmentStatus\": \"string\",\n    \"discountsApplied\": [\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"shopCurrency\": \"string\",\n    \"shopPriceDiscountTotal\": \"string\",\n    \"shopPriceItemsTotal\": \"string\",\n    \"shopPriceSubTotal\": \"string\",\n    \"shopPriceTotal\": \"string\",\n    \"shopPriceShipping\": \"string\",\n    \"shopPriceTax\": \"string\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderId\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"customerId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customOrderId\": \"string\",\n  \"currency\": \"string\",\n  \"referringSite\": \"string\",\n  \"sourceName\": \"string\",\n  \"sourceUrl\": \"string\",\n  \"clientAcceptLanguage\": \"string\",\n  \"clientUserAgent\": \"string\",\n  \"clientIp\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"orderEntries\": [\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    },\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    }\n  ],\n  \"cartStates\": [\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    },\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    }\n  ],\n  \"discountApplications\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8b29d845-36ad-4913-94e9-b505574fb0d3",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customOrderId\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"cart\": {\n    \"lineItems\": [\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      },\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      }\n    ],\n    \"financialStatus\": \"string\",\n    \"fulfillmentStatus\": \"string\",\n    \"discountsApplied\": [\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"shopCurrency\": \"string\",\n    \"shopPriceDiscountTotal\": \"string\",\n    \"shopPriceItemsTotal\": \"string\",\n    \"shopPriceSubTotal\": \"string\",\n    \"shopPriceTotal\": \"string\",\n    \"shopPriceShipping\": \"string\",\n    \"shopPriceTax\": \"string\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "597917b4-bd62-4bae-a813-118a60cf77d1",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customOrderId\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"cart\": {\n    \"lineItems\": [\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      },\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      }\n    ],\n    \"financialStatus\": \"string\",\n    \"fulfillmentStatus\": \"string\",\n    \"discountsApplied\": [\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"shopCurrency\": \"string\",\n    \"shopPriceDiscountTotal\": \"string\",\n    \"shopPriceItemsTotal\": \"string\",\n    \"shopPriceSubTotal\": \"string\",\n    \"shopPriceTotal\": \"string\",\n    \"shopPriceShipping\": \"string\",\n    \"shopPriceTax\": \"string\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "182b7898-bf56-426d-bf94-fcde2ee3dc64",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customOrderId\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"cart\": {\n    \"lineItems\": [\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      },\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      }\n    ],\n    \"financialStatus\": \"string\",\n    \"fulfillmentStatus\": \"string\",\n    \"discountsApplied\": [\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"shopCurrency\": \"string\",\n    \"shopPriceDiscountTotal\": \"string\",\n    \"shopPriceItemsTotal\": \"string\",\n    \"shopPriceSubTotal\": \"string\",\n    \"shopPriceTotal\": \"string\",\n    \"shopPriceShipping\": \"string\",\n    \"shopPriceTax\": \"string\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "16d5d7a6-f651-429d-9d8a-de9fc3b2b564",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"customOrderId\": \"<string>\",\n  \"customCustomerId\": \"<string>\",\n  \"customerId\": \"<string>\",\n  \"cart\": {\n    \"lineItems\": [\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      },\n      {\n        \"productId\": \"string\",\n        \"variantId\": \"string\",\n        \"customProductId\": \"string\",\n        \"customVariantId\": \"string\",\n        \"name\": \"string\",\n        \"giftCard\": \"string\",\n        \"quantity\": \"string\",\n        \"sku\": \"string\",\n        \"title\": \"string\",\n        \"variantTitle\": \"string\",\n        \"fulfillmentStatus\": \"string\",\n        \"price\": \"string\",\n        \"taxable\": \"string\"\n      }\n    ],\n    \"financialStatus\": \"string\",\n    \"fulfillmentStatus\": \"string\",\n    \"discountsApplied\": [\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      },\n      {\n        \"code\": \"string\",\n        \"amount\": \"string\",\n        \"type\": \"string\"\n      }\n    ],\n    \"shopCurrency\": \"string\",\n    \"shopPriceDiscountTotal\": \"string\",\n    \"shopPriceItemsTotal\": \"string\",\n    \"shopPriceSubTotal\": \"string\",\n    \"shopPriceTotal\": \"string\",\n    \"shopPriceShipping\": \"string\",\n    \"shopPriceTax\": \"string\"\n  },\n  \"tags\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4e86ec87-a435-4693-ba61-1b949e665bc4",
+          "name": "Filter Orders",
+          "request": {
+            "name": "Filter Orders",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) ShopId (storeHash)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cb816b51-e110-49e0-aeef-c2c37427e941",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"page\": 8303.415732906584,\n    \"limit\": 9229.131842739522,\n    \"morePages\": true,\n    \"subset\": false,\n    \"orders\": [\n      {\n        \"orderId\": \"string\",\n        \"accountId\": \"string\",\n        \"shopId\": \"string\",\n        \"customerId\": \"string\",\n        \"shopifyId\": \"string\",\n        \"bigcommerceId\": \"string\",\n        \"customOrderId\": \"string\",\n        \"currency\": \"string\",\n        \"referringSite\": \"string\",\n        \"sourceName\": \"string\",\n        \"sourceUrl\": \"string\",\n        \"clientAcceptLanguage\": \"string\",\n        \"clientUserAgent\": \"string\",\n        \"clientIp\": \"string\",\n        \"datePlatformCreated\": \"string\",\n        \"datePlatformUpdated\": \"string\",\n        \"dateStampedCreated\": \"string\",\n        \"dateStampedUpdated\": \"string\",\n        \"orderEntries\": [\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          },\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          }\n        ],\n        \"cartStates\": [\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          },\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          }\n        ],\n        \"discountApplications\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      {\n        \"orderId\": \"string\",\n        \"accountId\": \"string\",\n        \"shopId\": \"string\",\n        \"customerId\": \"string\",\n        \"shopifyId\": \"string\",\n        \"bigcommerceId\": \"string\",\n        \"customOrderId\": \"string\",\n        \"currency\": \"string\",\n        \"referringSite\": \"string\",\n        \"sourceName\": \"string\",\n        \"sourceUrl\": \"string\",\n        \"clientAcceptLanguage\": \"string\",\n        \"clientUserAgent\": \"string\",\n        \"clientIp\": \"string\",\n        \"datePlatformCreated\": \"string\",\n        \"datePlatformUpdated\": \"string\",\n        \"dateStampedCreated\": \"string\",\n        \"dateStampedUpdated\": \"string\",\n        \"orderEntries\": [\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          },\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          }\n        ],\n        \"cartStates\": [\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          },\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          }\n        ],\n        \"discountApplications\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    ]\n  },\n  {\n    \"page\": 8763.285347359553,\n    \"limit\": 7449.990587881364,\n    \"morePages\": false,\n    \"subset\": true,\n    \"orders\": [\n      {\n        \"orderId\": \"string\",\n        \"accountId\": \"string\",\n        \"shopId\": \"string\",\n        \"customerId\": \"string\",\n        \"shopifyId\": \"string\",\n        \"bigcommerceId\": \"string\",\n        \"customOrderId\": \"string\",\n        \"currency\": \"string\",\n        \"referringSite\": \"string\",\n        \"sourceName\": \"string\",\n        \"sourceUrl\": \"string\",\n        \"clientAcceptLanguage\": \"string\",\n        \"clientUserAgent\": \"string\",\n        \"clientIp\": \"string\",\n        \"datePlatformCreated\": \"string\",\n        \"datePlatformUpdated\": \"string\",\n        \"dateStampedCreated\": \"string\",\n        \"dateStampedUpdated\": \"string\",\n        \"orderEntries\": [\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          },\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          }\n        ],\n        \"cartStates\": [\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          },\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          }\n        ],\n        \"discountApplications\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      {\n        \"orderId\": \"string\",\n        \"accountId\": \"string\",\n        \"shopId\": \"string\",\n        \"customerId\": \"string\",\n        \"shopifyId\": \"string\",\n        \"bigcommerceId\": \"string\",\n        \"customOrderId\": \"string\",\n        \"currency\": \"string\",\n        \"referringSite\": \"string\",\n        \"sourceName\": \"string\",\n        \"sourceUrl\": \"string\",\n        \"clientAcceptLanguage\": \"string\",\n        \"clientUserAgent\": \"string\",\n        \"clientIp\": \"string\",\n        \"datePlatformCreated\": \"string\",\n        \"datePlatformUpdated\": \"string\",\n        \"dateStampedCreated\": \"string\",\n        \"dateStampedUpdated\": \"string\",\n        \"orderEntries\": [\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          },\n          {\n            \"cartHash\": \"string\",\n            \"event\": \"string\",\n            \"date\": \"string\"\n          }\n        ],\n        \"cartStates\": [\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          },\n          {\n            \"lineItems\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"financialStatus\": \"string\",\n            \"fulfillmentStatus\": \"string\",\n            \"discountsApplied\": [\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            ],\n            \"customerCurrency\": \"string\",\n            \"customerPriceDiscountTotal\": \"string\",\n            \"customerPriceItemsTotal\": \"string\",\n            \"customerPriceSubTotal\": \"string\",\n            \"customerPriceTotal\": \"string\",\n            \"customerPriceShipping\": \"string\",\n            \"customerPriceTax\": \"string\",\n            \"shopCurrency\": \"string\",\n            \"shopPriceDiscountTotal\": \"string\",\n            \"shopPriceItemsTotal\": \"string\",\n            \"shopPriceSubTotal\": \"string\",\n            \"shopPriceTotal\": \"string\",\n            \"shopPriceShipping\": \"string\",\n            \"shopPriceTax\": \"string\"\n          }\n        ],\n        \"discountApplications\": \"string\",\n        \"tags\": [\n          \"string\",\n          \"string\"\n        ]\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "963f22af-c45f-4917-a46c-d6ad310700ee",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7c08da86-480c-46ee-82ea-f750613e9eda",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b8b588c9-ca7d-4002-8580-fe79819d8dd2",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "462e2fe0-90b3-46dd-bc6f-ea6271fb5fe7",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) ShopId (storeHash)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "595ad7ba-8301-40a7-95ec-f464762f646a",
+          "name": "Delete Order",
+          "request": {
+            "name": "Delete Order",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "orders",
+                ":orderId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orderId",
+                  "description": "(Required) The orderId generated by Stamped on order creation"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b5480a32-fe80-44f8-8ff8-0756673fed42",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"softDelete\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "82e6c9d9-7eb4-4c45-a17c-d72186529db6",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ddea9eba-4f5b-49d9-8fc2-76ac65f13059",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a477d7cc-b0a0-4622-a071-cfb955d8303a",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3e1712ec-3ec5-4265-963b-dbd76971f508",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "564f37c1-6f8c-412d-bf85-2e7bc7048b98",
+          "name": "Get Order",
+          "request": {
+            "name": "Get Order",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "orders",
+                ":orderId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orderId",
+                  "description": "(Required) The orderId generated by Stamped on order creation"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2491e181-0136-41da-9ca2-0987533771fc",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderId\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"customerId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customOrderId\": \"string\",\n  \"currency\": \"string\",\n  \"referringSite\": \"string\",\n  \"sourceName\": \"string\",\n  \"sourceUrl\": \"string\",\n  \"clientAcceptLanguage\": \"string\",\n  \"clientUserAgent\": \"string\",\n  \"clientIp\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"orderEntries\": [\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    },\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    }\n  ],\n  \"cartStates\": [\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    },\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    }\n  ],\n  \"discountApplications\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2f2dfb67-957e-45a0-9e75-3ff9a6802566",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4c4fe3dd-4f39-4c16-ba1b-baef6d5800a9",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "10776e36-e986-4ce6-92a5-4dc360fe8bd3",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e30def00-f29a-47b9-bd97-1d5d938f882d",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97ce7784-6e26-4b13-b32e-75c39740a0a9",
+          "name": "Update Order",
+          "request": {
+            "name": "Update Order",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "orders",
+                ":orderId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "orderId",
+                  "description": "(Required) The orderId generated by Stamped on order creation"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"lineItems\": [\n    {\n      \"productId\": \"<string>\",\n      \"variantId\": \"<string>\",\n      \"customProductId\": \"<string>\",\n      \"customVariantId\": \"<string>\",\n      \"name\": \"<string>\",\n      \"giftCard\": \"<string>\",\n      \"quantity\": \"<string>\",\n      \"sku\": \"<string>\",\n      \"title\": \"<string>\",\n      \"variantTitle\": \"<string>\",\n      \"fulfillmentStatus\": \"<string>\",\n      \"price\": \"<string>\",\n      \"taxable\": \"<string>\"\n    },\n    {\n      \"productId\": \"<string>\",\n      \"variantId\": \"<string>\",\n      \"customProductId\": \"<string>\",\n      \"customVariantId\": \"<string>\",\n      \"name\": \"<string>\",\n      \"giftCard\": \"<string>\",\n      \"quantity\": \"<string>\",\n      \"sku\": \"<string>\",\n      \"title\": \"<string>\",\n      \"variantTitle\": \"<string>\",\n      \"fulfillmentStatus\": \"<string>\",\n      \"price\": \"<string>\",\n      \"taxable\": \"<string>\"\n    }\n  ],\n  \"financialStatus\": \"<string>\",\n  \"fulfillmentStatus\": \"<string>\",\n  \"discountsApplied\": [\n    {\n      \"code\": \"<string>\",\n      \"amount\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"code\": \"<string>\",\n      \"amount\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ],\n  \"shopCurrency\": \"<string>\",\n  \"shopPriceDiscountTotal\": \"<string>\",\n  \"shopPriceItemsTotal\": \"<string>\",\n  \"shopPriceSubTotal\": \"<string>\",\n  \"shopPriceTotal\": \"<string>\",\n  \"shopPriceShipping\": \"<string>\",\n  \"shopPriceTax\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1d0af359-d1e9-468d-9207-1311ce4ca57a",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lineItems\": [\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    },\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    }\n  ],\n  \"financialStatus\": \"<string>\",\n  \"fulfillmentStatus\": \"<string>\",\n  \"discountsApplied\": [\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"shopCurrency\": \"<string>\",\n  \"shopPriceDiscountTotal\": \"<string>\",\n  \"shopPriceItemsTotal\": \"<string>\",\n  \"shopPriceSubTotal\": \"<string>\",\n  \"shopPriceTotal\": \"<string>\",\n  \"shopPriceShipping\": \"<string>\",\n  \"shopPriceTax\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderId\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"customerId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customOrderId\": \"string\",\n  \"currency\": \"string\",\n  \"referringSite\": \"string\",\n  \"sourceName\": \"string\",\n  \"sourceUrl\": \"string\",\n  \"clientAcceptLanguage\": \"string\",\n  \"clientUserAgent\": \"string\",\n  \"clientIp\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"orderEntries\": [\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    },\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    }\n  ],\n  \"cartStates\": [\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    },\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    }\n  ],\n  \"discountApplications\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1e97964a-265a-4217-ace9-2b8e5e175e14",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lineItems\": [\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    },\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    }\n  ],\n  \"financialStatus\": \"<string>\",\n  \"fulfillmentStatus\": \"<string>\",\n  \"discountsApplied\": [\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"shopCurrency\": \"<string>\",\n  \"shopPriceDiscountTotal\": \"<string>\",\n  \"shopPriceItemsTotal\": \"<string>\",\n  \"shopPriceSubTotal\": \"<string>\",\n  \"shopPriceTotal\": \"<string>\",\n  \"shopPriceShipping\": \"<string>\",\n  \"shopPriceTax\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d1c97db2-da65-4ed5-a5a8-b3f9d9bf0cf9",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lineItems\": [\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    },\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    }\n  ],\n  \"financialStatus\": \"<string>\",\n  \"fulfillmentStatus\": \"<string>\",\n  \"discountsApplied\": [\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"shopCurrency\": \"<string>\",\n  \"shopPriceDiscountTotal\": \"<string>\",\n  \"shopPriceItemsTotal\": \"<string>\",\n  \"shopPriceSubTotal\": \"<string>\",\n  \"shopPriceTotal\": \"<string>\",\n  \"shopPriceShipping\": \"<string>\",\n  \"shopPriceTax\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b08d3482-6167-426c-ac10-4222d4641e88",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lineItems\": [\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    },\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    }\n  ],\n  \"financialStatus\": \"<string>\",\n  \"fulfillmentStatus\": \"<string>\",\n  \"discountsApplied\": [\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"shopCurrency\": \"<string>\",\n  \"shopPriceDiscountTotal\": \"<string>\",\n  \"shopPriceItemsTotal\": \"<string>\",\n  \"shopPriceSubTotal\": \"<string>\",\n  \"shopPriceTotal\": \"<string>\",\n  \"shopPriceShipping\": \"<string>\",\n  \"shopPriceTax\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "37c0152b-4b48-4edb-a58f-8a60ab554a85",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    ":orderId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "orderId",
+                      "description": "(Required) The orderId generated by Stamped on order creation"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lineItems\": [\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    },\n    {\n      \"productId\": \"string\",\n      \"variantId\": \"string\",\n      \"customProductId\": \"string\",\n      \"customVariantId\": \"string\",\n      \"name\": \"string\",\n      \"giftCard\": \"string\",\n      \"quantity\": \"string\",\n      \"sku\": \"string\",\n      \"title\": \"string\",\n      \"variantTitle\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"price\": \"string\",\n      \"taxable\": \"string\"\n    }\n  ],\n  \"financialStatus\": \"<string>\",\n  \"fulfillmentStatus\": \"<string>\",\n  \"discountsApplied\": [\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"code\": \"string\",\n      \"amount\": \"string\",\n      \"type\": \"string\"\n    }\n  ],\n  \"shopCurrency\": \"<string>\",\n  \"shopPriceDiscountTotal\": \"<string>\",\n  \"shopPriceItemsTotal\": \"<string>\",\n  \"shopPriceSubTotal\": \"<string>\",\n  \"shopPriceTotal\": \"<string>\",\n  \"shopPriceShipping\": \"<string>\",\n  \"shopPriceTax\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "11f2ae6c-6473-4903-a13a-e05030bc0ad5",
+          "name": "Lookup Order",
+          "request": {
+            "name": "Lookup Order",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "merchant",
+                "shops",
+                ":shopId",
+                "orders",
+                "lookup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "customOrderId",
+                  "value": "<string>",
+                  "description": "Custom OrderId to lookup Order by"
+                },
+                {
+                  "disabled": false,
+                  "key": "shopifyId",
+                  "value": "<string>",
+                  "description": "If Shopify, a matching shopifyId"
+                },
+                {
+                  "disabled": false,
+                  "key": "bigcommerceId",
+                  "value": "<string>",
+                  "description": "If BigCommerce, a matching bigcommerceId"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "shopId",
+                  "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "20579e91-ec6b-4d31-8526-2ae39eaa2ca6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "customOrderId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"orderId\": \"string\",\n  \"accountId\": \"string\",\n  \"shopId\": \"string\",\n  \"customerId\": \"string\",\n  \"shopifyId\": \"string\",\n  \"bigcommerceId\": \"string\",\n  \"customOrderId\": \"string\",\n  \"currency\": \"string\",\n  \"referringSite\": \"string\",\n  \"sourceName\": \"string\",\n  \"sourceUrl\": \"string\",\n  \"clientAcceptLanguage\": \"string\",\n  \"clientUserAgent\": \"string\",\n  \"clientIp\": \"string\",\n  \"datePlatformCreated\": \"string\",\n  \"datePlatformUpdated\": \"string\",\n  \"dateStampedCreated\": \"string\",\n  \"dateStampedUpdated\": \"string\",\n  \"orderEntries\": [\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    },\n    {\n      \"cartHash\": \"string\",\n      \"event\": \"string\",\n      \"date\": \"string\"\n    }\n  ],\n  \"cartStates\": [\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    },\n    {\n      \"lineItems\": [\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        },\n        {\n          \"productId\": \"string\",\n          \"variantId\": \"string\",\n          \"customProductId\": \"string\",\n          \"customVariantId\": \"string\",\n          \"shopifyProductId\": \"string\",\n          \"shopifyVariantId\": \"string\",\n          \"bigcommerceProductId\": \"string\",\n          \"bigcommerceVariantId\": \"string\",\n          \"name\": \"string\",\n          \"giftCard\": \"string\",\n          \"quantity\": \"string\",\n          \"sku\": \"string\",\n          \"title\": \"string\",\n          \"variantTitle\": \"string\",\n          \"fulfillmentStatus\": \"string\",\n          \"price\": \"string\",\n          \"taxable\": \"string\"\n        }\n      ],\n      \"financialStatus\": \"string\",\n      \"fulfillmentStatus\": \"string\",\n      \"discountsApplied\": [\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        },\n        {\n          \"code\": \"string\",\n          \"amount\": \"string\",\n          \"type\": \"string\"\n        }\n      ],\n      \"customerCurrency\": \"string\",\n      \"customerPriceDiscountTotal\": \"string\",\n      \"customerPriceItemsTotal\": \"string\",\n      \"customerPriceSubTotal\": \"string\",\n      \"customerPriceTotal\": \"string\",\n      \"customerPriceShipping\": \"string\",\n      \"customerPriceTax\": \"string\",\n      \"shopCurrency\": \"string\",\n      \"shopPriceDiscountTotal\": \"string\",\n      \"shopPriceItemsTotal\": \"string\",\n      \"shopPriceSubTotal\": \"string\",\n      \"shopPriceTotal\": \"string\",\n      \"shopPriceShipping\": \"string\",\n      \"shopPriceTax\": \"string\"\n    }\n  ],\n  \"discountApplications\": \"string\",\n  \"tags\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "272131e8-bb0a-4434-a775-6393ac2d957a",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "customOrderId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f26bbaa9-85b7-44c9-8430-6643160792ee",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "customOrderId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "86626a89-c29e-432c-b027-072db40ca1fe",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "customOrderId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e230dde0-e7ed-4e5c-af4a-1d902dc1bd34",
+              "name": "Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "merchant",
+                    "shops",
+                    ":shopId",
+                    "orders",
+                    "lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "customOrderId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopifyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "bigcommerceId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "shopId",
+                      "description": "(Required) The shopId, or storeHash associated with Stamped account"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "stamped-api-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://stamped.io",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "stamped-api-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c72782a1-0666-4eae-ac4d-482a65cd16d5",
+    "name": "Loyalty Operations Customer Actions Orders API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Stamped V3 Loyalty Operations API. Harvested by API Evangelist from the per-operation OpenAPI definitions published at https://developers.stamped.io/reference/.",
+      "type": "text/plain"
+    }
+  }
+}

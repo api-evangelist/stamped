@@ -1,0 +1,220 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loyalty Operations Customer Actions API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "stamped-api-key",
+      "value": "{{stamped-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customer Actions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Adjust Points",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/customers/:customerId/adjust-points",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the customer."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adjust Points"
+        },
+        {
+          "info": {
+            "name": "Adjust VIP Tier",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/customers/:customerId/adjust-vip-tier",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the customer."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Adjust VIP Tier"
+        },
+        {
+          "info": {
+            "name": "Create custom activity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/activities",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query",
+                "description": "The customer's email."
+              },
+              {
+                "name": "campaignId",
+                "value": "",
+                "type": "query",
+                "description": "The Id of the custom activity rule being triggered."
+              }
+            ]
+          },
+          "docs": "Create custom activity"
+        },
+        {
+          "info": {
+            "name": "Redeem Reward",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/customers/:customerId/redeem-reward/:rewardId",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the customer."
+              },
+              {
+                "name": "rewardId",
+                "value": "",
+                "type": "path",
+                "description": "The API Reward Rule Id."
+              },
+              {
+                "name": "points",
+                "value": "",
+                "type": "query",
+                "description": "The amount of points used to redeem (if applicable)."
+              }
+            ]
+          },
+          "docs": "Redeem Reward"
+        },
+        {
+          "info": {
+            "name": "Trigger Activity",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/customers/:customerId/trigger-activity",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the customer."
+              },
+              {
+                "name": "ruleId",
+                "value": "",
+                "type": "query",
+                "description": "The unique identifier of the rule."
+              },
+              {
+                "name": "title",
+                "value": "",
+                "type": "query",
+                "description": "The title of the rule."
+              }
+            ]
+          },
+          "docs": "Trigger Activity"
+        },
+        {
+          "info": {
+            "name": "Void Coupon",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/customers/:customerId/void-coupon/:couponCode",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the customer."
+              },
+              {
+                "name": "couponCode",
+                "value": "",
+                "type": "path",
+                "description": "The coupon code of the coupon that is to be voided."
+              }
+            ]
+          },
+          "docs": "Void Coupon"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

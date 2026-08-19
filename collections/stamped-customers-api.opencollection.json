@@ -1,0 +1,280 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loyalty Operations Customer Actions Customers API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "stamped-api-key",
+      "value": "{{stamped-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Filter Customers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://stamped.io/api/v3/merchant/shops/:shopId/customers",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "ShopId (storeHash)"
+              },
+              {
+                "name": "shopifyId",
+                "value": "",
+                "type": "query",
+                "description": "If Shopify, a matching shopifyId"
+              },
+              {
+                "name": "bigcommerceId",
+                "value": "",
+                "type": "query",
+                "description": "If BigCommerce, a matching bigcommerceId"
+              },
+              {
+                "name": "customCustomerId",
+                "value": "",
+                "type": "query",
+                "description": "If other platform, a matching customCustomerId"
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query",
+                "description": "A begins with email match"
+              },
+              {
+                "name": "firstName",
+                "value": "",
+                "type": "query",
+                "description": "A begins with firstName match"
+              },
+              {
+                "name": "lastName",
+                "value": "",
+                "type": "query",
+                "description": "A begins with lastName match"
+              },
+              {
+                "name": "lastFirst",
+                "value": "",
+                "type": "query",
+                "description": "Match by lastName first"
+              },
+              {
+                "name": "datePlatformCreated",
+                "value": "",
+                "type": "query",
+                "description": "Date parsable minimum range"
+              },
+              {
+                "name": "datePlatformCreatedEnd",
+                "value": "",
+                "type": "query",
+                "description": "Date parsable maximum range"
+              },
+              {
+                "name": "reviewsMin",
+                "value": "",
+                "type": "query",
+                "description": "Minimum number of reviews range"
+              },
+              {
+                "name": "reviewsMax",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of reviews range"
+              },
+              {
+                "name": "pointsMin",
+                "value": "",
+                "type": "query",
+                "description": "Minimum number of points range"
+              },
+              {
+                "name": "pointsMax",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of points range"
+              },
+              {
+                "name": "vipTier",
+                "value": "",
+                "type": "query",
+                "description": "Matching vipTier"
+              },
+              {
+                "name": "tags",
+                "value": "",
+                "type": "query",
+                "description": "Customer tags"
+              }
+            ]
+          },
+          "docs": "Filter Customers"
+        },
+        {
+          "info": {
+            "name": "Create Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://stamped.io/api/v3/merchant/shops/:shopId/customers",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "ShopId (storeHash)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create Customer"
+        },
+        {
+          "info": {
+            "name": "Get Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://stamped.io/api/v3/merchant/shops/:shopId/customers/:customerId",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The shopId, or storeHash associated with Stamped account"
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The customerId generated by Stamped on customer creation"
+              }
+            ]
+          },
+          "docs": "Get Customer"
+        },
+        {
+          "info": {
+            "name": "Update Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://stamped.io/api/v3/merchant/shops/:shopId/customers/:customerId",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The shopId, or storeHash associated with Stamped account"
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The customerId generated by Stamped on customer creation"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Customer"
+        },
+        {
+          "info": {
+            "name": "Delete Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://stamped.io/api/v3/merchant/shops/:shopId/customers/:customerId",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The shopId, or storeHash associated with Stamped account"
+              },
+              {
+                "name": "customerId",
+                "value": "",
+                "type": "path",
+                "description": "The customerId generated by Stamped on customer creation"
+              }
+            ]
+          },
+          "docs": "Delete Customer"
+        },
+        {
+          "info": {
+            "name": "Lookup Customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://stamped.io/api/v3/merchant/shops/:shopId/customers/lookup",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The shopId, or storeHash associated with Stamped account"
+              },
+              {
+                "name": "email",
+                "value": "",
+                "type": "query",
+                "description": "Email to lookup customer by"
+              },
+              {
+                "name": "customCustomerId",
+                "value": "",
+                "type": "query",
+                "description": "Custom CustomerId to lookup customer by"
+              },
+              {
+                "name": "shopifyId",
+                "value": "",
+                "type": "query",
+                "description": "If Shopify, a matching shopifyId"
+              },
+              {
+                "name": "bigcommerceId",
+                "value": "",
+                "type": "query",
+                "description": "If BigCommerce, a matching bigcommerceId"
+              }
+            ]
+          },
+          "docs": "Lookup Customer"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

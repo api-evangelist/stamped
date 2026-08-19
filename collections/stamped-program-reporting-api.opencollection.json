@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Loyalty Operations Customer Actions Program Reporting API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "stamped-api-key",
+      "value": "{{stamped-api-key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Program Reporting",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Filter Activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/activities",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "The pagination page number to load."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The number or results per page."
+              }
+            ]
+          },
+          "docs": "Filter Activities"
+        },
+        {
+          "info": {
+            "name": "Filter Rewards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://stamped.io/api/v3/loyalty/shops/:shopId/rewards",
+            "params": [
+              {
+                "name": "shopId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the shop."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "The pagination page number to load."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "The number or results per page."
+              }
+            ]
+          },
+          "docs": "Filter Rewards"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

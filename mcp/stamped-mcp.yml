@@ -86,3 +86,9 @@ tools:
 - name: loyalty-void-coupon
   description: Void Coupon
   source_operation: openapi/stamped-loyalty-operations-openapi.json#loyalty-void-coupon
+deployment:
+  mode: none
+  verified: derived
+  tools: 26
+  checked: '2026-08-12'
+  source: catalog MCP census

@@ -73,6 +73,8 @@ apis:
   humanURL: https://developers.stamped.io/docs/merchant-apis
   baseURL: https://stamped.io/api/v3/merchant
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -83,6 +85,8 @@ apis:
   humanURL: https://developers.stamped.io/docs/merchant-apis
   baseURL: https://stamped.io/api/v3/merchant
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI

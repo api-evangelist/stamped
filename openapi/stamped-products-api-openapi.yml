@@ -1,12 +1,12 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Loyalty Operations Customer Actions Products API
+  title: Merchant Data Products API
   version: 3.0.0
   x-provenance:
     generated: '2026-07-21'
     method: searched
     source: https://developers.stamped.io/reference/ (embedded OpenAPI per operation)
-  description: Stamped V3 Loyalty Operations API. Harvested by API Evangelist from the per-operation OpenAPI definitions published at https://developers.stamped.io/reference/.
+  description: Stamped V3 Merchant Data API. Harvested by API Evangelist from the per-operation OpenAPI definitions published at https://developers.stamped.io/reference/.
 servers:
 - url: https://stamped.io
 security:
@@ -359,22 +359,70 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    ProductImage:
+    ProductVariantRequest:
       type: object
       properties:
-        variantMatches:
-          type: array
-          items:
-            type: string
+        customVariantId:
+          type: string
+        title:
+          type: string
+        price:
+          type: string
+        sku:
+          type: string
         position:
           type: string
-        altText:
+        taxable:
           type: string
-        width:
+        barcode:
           type: string
-        height:
+        weight:
           type: string
-        urlSrc:
+        weightUnit:
+          type: string
+        requiresShipping:
+          type: string
+        inventoryQuantity:
+          type: string
+    ProductVariantResponse:
+      type: object
+      properties:
+        customVariantId:
+          type: string
+        shopifyVariantId:
+          type: string
+        bigcommerceVariantId:
+          type: string
+        title:
+          type: string
+        price:
+          type: string
+        sku:
+          type: string
+        position:
+          type: string
+        taxable:
+          type: string
+        barcode:
+          type: string
+        grams:
+          type: string
+        weight:
+          type: string
+        weightUnit:
+          type: string
+        requiresShipping:
+          type: string
+        inventoryPolicy:
+          type: string
+        inventoryManagement:
+          type: string
+        inventoryQuantity:
+          type: string
+    ErrorMessage:
+      type: object
+      properties:
+        message:
           type: string
     ProductRequest:
       type: object
@@ -411,35 +459,37 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductImage'
-    ProductVariantRequest:
+    PaginatedProducts:
       type: object
       properties:
-        customVariantId:
-          type: string
-        title:
-          type: string
-        price:
-          type: string
-        sku:
-          type: string
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductResponse'
+    ProductImage:
+      type: object
+      properties:
+        variantMatches:
+          type: array
+          items:
+            type: string
         position:
           type: string
-        taxable:
+        altText:
           type: string
-        barcode:
+        width:
           type: string
-        weight:
+        height:
           type: string
-        weightUnit:
-          type: string
-        requiresShipping:
-          type: string
-        inventoryQuantity:
-          type: string
-    ErrorMessage:
-      type: object
-      properties:
-        message:
+        urlSrc:
           type: string
     ProductResponse:
       type: object
@@ -492,56 +542,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductImage'
-    ProductVariantResponse:
-      type: object
-      properties:
-        customVariantId:
-          type: string
-        shopifyVariantId:
-          type: string
-        bigcommerceVariantId:
-          type: string
-        title:
-          type: string
-        price:
-          type: string
-        sku:
-          type: string
-        position:
-          type: string
-        taxable:
-          type: string
-        barcode:
-          type: string
-        grams:
-          type: string
-        weight:
-          type: string
-        weightUnit:
-          type: string
-        requiresShipping:
-          type: string
-        inventoryPolicy:
-          type: string
-        inventoryManagement:
-          type: string
-        inventoryQuantity:
-          type: string
-    PaginatedProducts:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        products:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductResponse'
   securitySchemes:
     StampedApiKeyAuth:
       type: apiKey

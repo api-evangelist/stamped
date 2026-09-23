@@ -1,22 +1,35 @@
 {
   "provider": "stamped",
   "sources": [
-    "stamped-customer-actions-api-openapi.yml",
-    "stamped-customers-api-openapi.yml",
-    "stamped-orders-api-openapi.yml",
-    "stamped-products-api-openapi.yml",
-    "stamped-program-reporting-api-openapi.yml"
+    "_original/stamped-loyalty-operations-openapi.json",
+    "_original/stamped-merchant-data-openapi.json"
   ],
   "outputs": [
     "stamped-customer-actions-api-openapi.yml",
+    "stamped-program-reporting-api-openapi.yml",
     "stamped-customers-api-openapi.yml",
     "stamped-orders-api-openapi.yml",
-    "stamped-products-api-openapi.yml",
-    "stamped-program-reporting-api-openapi.yml"
+    "stamped-products-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "stamped-loyalty-operations-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "stamped-loyalty-operations-openapi.json: declared missing tag: Customer Actions",
+    "stamped-loyalty-operations-openapi.json: declared missing tag: Program Reporting",
+    "stamped-merchant-data-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "stamped-merchant-data-openapi.json: declared missing tag: Customers",
+    "stamped-merchant-data-openapi.json: declared missing tag: Orders",
+    "stamped-merchant-data-openapi.json: declared missing tag: Products",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "stamped-customer-actions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "stamped-customers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "stamped-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "stamped-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "stamped-program-reporting-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

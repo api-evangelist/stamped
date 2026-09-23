@@ -1,12 +1,12 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Loyalty Operations Customer Actions Orders API
+  title: Merchant Data Orders API
   version: 3.0.0
   x-provenance:
     generated: '2026-07-21'
     method: searched
     source: https://developers.stamped.io/reference/ (embedded OpenAPI per operation)
-  description: Stamped V3 Loyalty Operations API. Harvested by API Evangelist from the per-operation OpenAPI definitions published at https://developers.stamped.io/reference/.
+  description: Stamped V3 Merchant Data API. Harvested by API Evangelist from the per-operation OpenAPI definitions published at https://developers.stamped.io/reference/.
 servers:
 - url: https://stamped.io
 security:
@@ -296,168 +296,6 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    OrderEntry:
-      type: object
-      properties:
-        cartHash:
-          type: string
-        event:
-          type: string
-        date:
-          type: string
-    OrderCart:
-      type: object
-      properties:
-        lineItems:
-          type: array
-          items:
-            $ref: '#/components/schemas/CartItem'
-        financialStatus:
-          type: string
-        fulfillmentStatus:
-          type: string
-        discountsApplied:
-          type: array
-          items:
-            $ref: '#/components/schemas/DiscountApplied'
-        customerCurrency:
-          type: string
-        customerPriceDiscountTotal:
-          type: string
-        customerPriceItemsTotal:
-          type: string
-        customerPriceSubTotal:
-          type: string
-        customerPriceTotal:
-          type: string
-        customerPriceShipping:
-          type: string
-        customerPriceTax:
-          type: string
-        shopCurrency:
-          type: string
-        shopPriceDiscountTotal:
-          type: string
-        shopPriceItemsTotal:
-          type: string
-        shopPriceSubTotal:
-          type: string
-        shopPriceTotal:
-          type: string
-        shopPriceShipping:
-          type: string
-        shopPriceTax:
-          type: string
-    PaginatedOrders:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        orders:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrderResponse'
-    DiscountApplied:
-      type: object
-      properties:
-        code:
-          type: string
-        amount:
-          type: string
-        type:
-          type: string
-    OrderCartRequest:
-      type: object
-      properties:
-        lineItems:
-          type: array
-          items:
-            $ref: '#/components/schemas/CartItemRequest'
-        financialStatus:
-          type: string
-        fulfillmentStatus:
-          type: string
-        discountsApplied:
-          type: array
-          items:
-            $ref: '#/components/schemas/DiscountApplied'
-        shopCurrency:
-          type: string
-        shopPriceDiscountTotal:
-          type: string
-        shopPriceItemsTotal:
-          type: string
-        shopPriceSubTotal:
-          type: string
-        shopPriceTotal:
-          type: string
-        shopPriceShipping:
-          type: string
-        shopPriceTax:
-          type: string
-    OrderRequest:
-      type: object
-      properties:
-        customOrderId:
-          type: string
-        customCustomerId:
-          type: string
-        customerId:
-          type: string
-        cart:
-          $ref: '#/components/schemas/OrderCartRequest'
-        tags:
-          type: array
-          items:
-            type: string
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
-    CartItem:
-      type: object
-      properties:
-        productId:
-          type: string
-        variantId:
-          type: string
-        customProductId:
-          type: string
-        customVariantId:
-          type: string
-        shopifyProductId:
-          type: string
-        shopifyVariantId:
-          type: string
-        bigcommerceProductId:
-          type: string
-        bigcommerceVariantId:
-          type: string
-        name:
-          type: string
-        giftCard:
-          type: string
-        quantity:
-          type: string
-        sku:
-          type: string
-        title:
-          type: string
-        variantTitle:
-          type: string
-        fulfillmentStatus:
-          type: string
-        price:
-          type: string
-        taxable:
-          type: string
     OrderResponse:
       type: object
       properties:
@@ -539,6 +377,168 @@ components:
         price:
           type: string
         taxable:
+          type: string
+    OrderEntry:
+      type: object
+      properties:
+        cartHash:
+          type: string
+        event:
+          type: string
+        date:
+          type: string
+    OrderCart:
+      type: object
+      properties:
+        lineItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItem'
+        financialStatus:
+          type: string
+        fulfillmentStatus:
+          type: string
+        discountsApplied:
+          type: array
+          items:
+            $ref: '#/components/schemas/DiscountApplied'
+        customerCurrency:
+          type: string
+        customerPriceDiscountTotal:
+          type: string
+        customerPriceItemsTotal:
+          type: string
+        customerPriceSubTotal:
+          type: string
+        customerPriceTotal:
+          type: string
+        customerPriceShipping:
+          type: string
+        customerPriceTax:
+          type: string
+        shopCurrency:
+          type: string
+        shopPriceDiscountTotal:
+          type: string
+        shopPriceItemsTotal:
+          type: string
+        shopPriceSubTotal:
+          type: string
+        shopPriceTotal:
+          type: string
+        shopPriceShipping:
+          type: string
+        shopPriceTax:
+          type: string
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    CartItem:
+      type: object
+      properties:
+        productId:
+          type: string
+        variantId:
+          type: string
+        customProductId:
+          type: string
+        customVariantId:
+          type: string
+        shopifyProductId:
+          type: string
+        shopifyVariantId:
+          type: string
+        bigcommerceProductId:
+          type: string
+        bigcommerceVariantId:
+          type: string
+        name:
+          type: string
+        giftCard:
+          type: string
+        quantity:
+          type: string
+        sku:
+          type: string
+        title:
+          type: string
+        variantTitle:
+          type: string
+        fulfillmentStatus:
+          type: string
+        price:
+          type: string
+        taxable:
+          type: string
+    DiscountApplied:
+      type: object
+      properties:
+        code:
+          type: string
+        amount:
+          type: string
+        type:
+          type: string
+    PaginatedOrders:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderResponse'
+    OrderRequest:
+      type: object
+      properties:
+        customOrderId:
+          type: string
+        customCustomerId:
+          type: string
+        customerId:
+          type: string
+        cart:
+          $ref: '#/components/schemas/OrderCartRequest'
+        tags:
+          type: array
+          items:
+            type: string
+    OrderCartRequest:
+      type: object
+      properties:
+        lineItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemRequest'
+        financialStatus:
+          type: string
+        fulfillmentStatus:
+          type: string
+        discountsApplied:
+          type: array
+          items:
+            $ref: '#/components/schemas/DiscountApplied'
+        shopCurrency:
+          type: string
+        shopPriceDiscountTotal:
+          type: string
+        shopPriceItemsTotal:
+          type: string
+        shopPriceSubTotal:
+          type: string
+        shopPriceTotal:
+          type: string
+        shopPriceShipping:
+          type: string
+        shopPriceTax:
           type: string
   securitySchemes:
     StampedApiKeyAuth:

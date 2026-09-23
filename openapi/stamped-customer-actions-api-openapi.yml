@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Loyalty Operations Customer Actions API
   version: 3.0.0
@@ -398,11 +398,6 @@ components:
                   type: number
                 totalRefunded:
                   type: number
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
     RewardResponse:
       type: object
       properties:
@@ -429,6 +424,11 @@ components:
         dateCreated:
           type: string
         dateOfExpiry:
+          type: string
+    ErrorMessage:
+      type: object
+      properties:
+        message:
           type: string
   securitySchemes:
     StampedApiKeyAuth:

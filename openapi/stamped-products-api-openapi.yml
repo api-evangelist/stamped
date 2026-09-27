@@ -359,6 +359,23 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
+    ProductImage:
+      type: object
+      properties:
+        variantMatches:
+          type: array
+          items:
+            type: string
+        position:
+          type: string
+        altText:
+          type: string
+        width:
+          type: string
+        height:
+          type: string
+        urlSrc:
+          type: string
     ProductVariantRequest:
       type: object
       properties:
@@ -384,81 +401,6 @@ components:
           type: string
         inventoryQuantity:
           type: string
-    ProductVariantResponse:
-      type: object
-      properties:
-        customVariantId:
-          type: string
-        shopifyVariantId:
-          type: string
-        bigcommerceVariantId:
-          type: string
-        title:
-          type: string
-        price:
-          type: string
-        sku:
-          type: string
-        position:
-          type: string
-        taxable:
-          type: string
-        barcode:
-          type: string
-        grams:
-          type: string
-        weight:
-          type: string
-        weightUnit:
-          type: string
-        requiresShipping:
-          type: string
-        inventoryPolicy:
-          type: string
-        inventoryManagement:
-          type: string
-        inventoryQuantity:
-          type: string
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
-    ProductRequest:
-      type: object
-      properties:
-        customProductId:
-          type: string
-        publishedScope:
-          type: string
-        status:
-          type: string
-        title:
-          type: string
-        htmlProductDescription:
-          type: string
-        vendor:
-          type: string
-        type:
-          type: string
-        handle:
-          type: string
-        datePublished:
-          type: string
-        datePlatformUpdated:
-          type: string
-        tags:
-          type: array
-          items:
-            type: string
-        variants:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductVariantRequest'
-        images:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductImage'
     PaginatedProducts:
       type: object
       properties:
@@ -474,23 +416,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductResponse'
-    ProductImage:
-      type: object
-      properties:
-        variantMatches:
-          type: array
-          items:
-            type: string
-        position:
-          type: string
-        altText:
-          type: string
-        width:
-          type: string
-        height:
-          type: string
-        urlSrc:
-          type: string
     ProductResponse:
       type: object
       properties:
@@ -542,6 +467,81 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductImage'
+    ProductRequest:
+      type: object
+      properties:
+        customProductId:
+          type: string
+        publishedScope:
+          type: string
+        status:
+          type: string
+        title:
+          type: string
+        htmlProductDescription:
+          type: string
+        vendor:
+          type: string
+        type:
+          type: string
+        handle:
+          type: string
+        datePublished:
+          type: string
+        datePlatformUpdated:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+        variants:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductVariantRequest'
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductImage'
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    ProductVariantResponse:
+      type: object
+      properties:
+        customVariantId:
+          type: string
+        shopifyVariantId:
+          type: string
+        bigcommerceVariantId:
+          type: string
+        title:
+          type: string
+        price:
+          type: string
+        sku:
+          type: string
+        position:
+          type: string
+        taxable:
+          type: string
+        barcode:
+          type: string
+        grams:
+          type: string
+        weight:
+          type: string
+        weightUnit:
+          type: string
+        requiresShipping:
+          type: string
+        inventoryPolicy:
+          type: string
+        inventoryManagement:
+          type: string
+        inventoryQuantity:
+          type: string
   securitySchemes:
     StampedApiKeyAuth:
       type: apiKey

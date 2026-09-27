@@ -120,11 +120,6 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
     ActivityResponse:
       type: object
       properties:
@@ -171,21 +166,6 @@ components:
                   type: number
                 totalRefunded:
                   type: number
-    PaginatedActivities:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        activities:
-          type: array
-          items:
-            $ref: '#/components/schemas/ActivityResponse'
     RewardResponse:
       type: object
       properties:
@@ -212,6 +192,26 @@ components:
         dateCreated:
           type: string
         dateOfExpiry:
+          type: string
+    PaginatedActivities:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        activities:
+          type: array
+          items:
+            $ref: '#/components/schemas/ActivityResponse'
+    ErrorMessage:
+      type: object
+      properties:
+        message:
           type: string
     PaginatedRewards:
       type: object

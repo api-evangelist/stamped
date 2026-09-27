@@ -393,11 +393,40 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    ErrorMessage:
+    CustomerActivity:
       type: object
       properties:
-        message:
+        vipTier:
           type: string
+        dateVipTierUpdated:
+          type: string
+        totalPoints:
+          type: string
+        dateTotalPointsUpdated:
+          type: string
+        totalAffiliateOrders:
+          type: string
+        dateAffiliateOrdersUpdated:
+          type: string
+        totalReviews:
+          type: string
+        dateReviewsUpdated:
+          type: string
+    PaginatedCustomers:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        customers:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerResponse'
     CustomerAddress:
       type: object
       properties:
@@ -430,39 +459,33 @@ components:
           type: string
         dateNotified:
           type: string
-    PaginatedCustomers:
+    CustomerRequest:
       type: object
       properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        customers:
+        email:
+          type: string
+        customCustomerId:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        dateOfBirth:
+          type: string
+        datePlatformUpdated:
+          type: string
+        tags:
           type: array
           items:
-            $ref: '#/components/schemas/CustomerResponse'
-    CustomerActivity:
+            type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerAddress'
+    ErrorMessage:
       type: object
       properties:
-        vipTier:
-          type: string
-        dateVipTierUpdated:
-          type: string
-        totalPoints:
-          type: string
-        dateTotalPointsUpdated:
-          type: string
-        totalAffiliateOrders:
-          type: string
-        dateAffiliateOrdersUpdated:
-          type: string
-        totalReviews:
-          type: string
-        dateReviewsUpdated:
+        message:
           type: string
     CustomerResponse:
       type: object
@@ -519,29 +542,6 @@ components:
             type: string
         activity:
           $ref: '#/components/schemas/CustomerActivity'
-    CustomerRequest:
-      type: object
-      properties:
-        email:
-          type: string
-        customCustomerId:
-          type: string
-        firstName:
-          type: string
-        lastName:
-          type: string
-        dateOfBirth:
-          type: string
-        datePlatformUpdated:
-          type: string
-        tags:
-          type: array
-          items:
-            type: string
-        addresses:
-          type: array
-          items:
-            $ref: '#/components/schemas/CustomerAddress'
   securitySchemes:
     StampedApiKeyAuth:
       type: apiKey

@@ -296,6 +296,102 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
+    PaginatedOrders:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderResponse'
+    OrderCartRequest:
+      type: object
+      properties:
+        lineItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/CartItemRequest'
+        financialStatus:
+          type: string
+        fulfillmentStatus:
+          type: string
+        discountsApplied:
+          type: array
+          items:
+            $ref: '#/components/schemas/DiscountApplied'
+        shopCurrency:
+          type: string
+        shopPriceDiscountTotal:
+          type: string
+        shopPriceItemsTotal:
+          type: string
+        shopPriceSubTotal:
+          type: string
+        shopPriceTotal:
+          type: string
+        shopPriceShipping:
+          type: string
+        shopPriceTax:
+          type: string
+    OrderRequest:
+      type: object
+      properties:
+        customOrderId:
+          type: string
+        customCustomerId:
+          type: string
+        customerId:
+          type: string
+        cart:
+          $ref: '#/components/schemas/OrderCartRequest'
+        tags:
+          type: array
+          items:
+            type: string
+    CartItem:
+      type: object
+      properties:
+        productId:
+          type: string
+        variantId:
+          type: string
+        customProductId:
+          type: string
+        customVariantId:
+          type: string
+        shopifyProductId:
+          type: string
+        shopifyVariantId:
+          type: string
+        bigcommerceProductId:
+          type: string
+        bigcommerceVariantId:
+          type: string
+        name:
+          type: string
+        giftCard:
+          type: string
+        quantity:
+          type: string
+        sku:
+          type: string
+        title:
+          type: string
+        variantTitle:
+          type: string
+        fulfillmentStatus:
+          type: string
+        price:
+          type: string
+        taxable:
+          type: string
     OrderResponse:
       type: object
       properties:
@@ -349,35 +445,6 @@ components:
           type: array
           items:
             type: string
-    CartItemRequest:
-      type: object
-      properties:
-        productId:
-          type: string
-        variantId:
-          type: string
-        customProductId:
-          type: string
-        customVariantId:
-          type: string
-        name:
-          type: string
-        giftCard:
-          type: string
-        quantity:
-          type: string
-        sku:
-          type: string
-        title:
-          type: string
-        variantTitle:
-          type: string
-        fulfillmentStatus:
-          type: string
-        price:
-          type: string
-        taxable:
-          type: string
     OrderEntry:
       type: object
       properties:
@@ -435,7 +502,16 @@ components:
       properties:
         message:
           type: string
-    CartItem:
+    DiscountApplied:
+      type: object
+      properties:
+        code:
+          type: string
+        amount:
+          type: string
+        type:
+          type: string
+    CartItemRequest:
       type: object
       properties:
         productId:
@@ -445,14 +521,6 @@ components:
         customProductId:
           type: string
         customVariantId:
-          type: string
-        shopifyProductId:
-          type: string
-        shopifyVariantId:
-          type: string
-        bigcommerceProductId:
-          type: string
-        bigcommerceVariantId:
           type: string
         name:
           type: string
@@ -471,74 +539,6 @@ components:
         price:
           type: string
         taxable:
-          type: string
-    DiscountApplied:
-      type: object
-      properties:
-        code:
-          type: string
-        amount:
-          type: string
-        type:
-          type: string
-    PaginatedOrders:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        orders:
-          type: array
-          items:
-            $ref: '#/components/schemas/OrderResponse'
-    OrderRequest:
-      type: object
-      properties:
-        customOrderId:
-          type: string
-        customCustomerId:
-          type: string
-        customerId:
-          type: string
-        cart:
-          $ref: '#/components/schemas/OrderCartRequest'
-        tags:
-          type: array
-          items:
-            type: string
-    OrderCartRequest:
-      type: object
-      properties:
-        lineItems:
-          type: array
-          items:
-            $ref: '#/components/schemas/CartItemRequest'
-        financialStatus:
-          type: string
-        fulfillmentStatus:
-          type: string
-        discountsApplied:
-          type: array
-          items:
-            $ref: '#/components/schemas/DiscountApplied'
-        shopCurrency:
-          type: string
-        shopPriceDiscountTotal:
-          type: string
-        shopPriceItemsTotal:
-          type: string
-        shopPriceSubTotal:
-          type: string
-        shopPriceTotal:
-          type: string
-        shopPriceShipping:
-          type: string
-        shopPriceTax:
           type: string
   securitySchemes:
     StampedApiKeyAuth:

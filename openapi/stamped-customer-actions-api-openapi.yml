@@ -352,6 +352,11 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
     ActivityResponse:
       type: object
       properties:
@@ -424,11 +429,6 @@ components:
         dateCreated:
           type: string
         dateOfExpiry:
-          type: string
-    ErrorMessage:
-      type: object
-      properties:
-        message:
           type: string
   securitySchemes:
     StampedApiKeyAuth:

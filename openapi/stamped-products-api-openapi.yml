@@ -359,23 +359,46 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    ProductImage:
+    ErrorMessage:
       type: object
       properties:
-        variantMatches:
+        message:
+          type: string
+    ProductRequest:
+      type: object
+      properties:
+        customProductId:
+          type: string
+        publishedScope:
+          type: string
+        status:
+          type: string
+        title:
+          type: string
+        htmlProductDescription:
+          type: string
+        vendor:
+          type: string
+        type:
+          type: string
+        handle:
+          type: string
+        datePublished:
+          type: string
+        datePlatformUpdated:
+          type: string
+        tags:
           type: array
           items:
             type: string
-        position:
-          type: string
-        altText:
-          type: string
-        width:
-          type: string
-        height:
-          type: string
-        urlSrc:
-          type: string
+        variants:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductVariantRequest'
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductImage'
     ProductVariantRequest:
       type: object
       properties:
@@ -416,6 +439,41 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductResponse'
+    ProductVariantResponse:
+      type: object
+      properties:
+        customVariantId:
+          type: string
+        shopifyVariantId:
+          type: string
+        bigcommerceVariantId:
+          type: string
+        title:
+          type: string
+        price:
+          type: string
+        sku:
+          type: string
+        position:
+          type: string
+        taxable:
+          type: string
+        barcode:
+          type: string
+        grams:
+          type: string
+        weight:
+          type: string
+        weightUnit:
+          type: string
+        requiresShipping:
+          type: string
+        inventoryPolicy:
+          type: string
+        inventoryManagement:
+          type: string
+        inventoryQuantity:
+          type: string
     ProductResponse:
       type: object
       properties:
@@ -467,80 +525,22 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductImage'
-    ProductRequest:
+    ProductImage:
       type: object
       properties:
-        customProductId:
-          type: string
-        publishedScope:
-          type: string
-        status:
-          type: string
-        title:
-          type: string
-        htmlProductDescription:
-          type: string
-        vendor:
-          type: string
-        type:
-          type: string
-        handle:
-          type: string
-        datePublished:
-          type: string
-        datePlatformUpdated:
-          type: string
-        tags:
+        variantMatches:
           type: array
           items:
             type: string
-        variants:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductVariantRequest'
-        images:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductImage'
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
-    ProductVariantResponse:
-      type: object
-      properties:
-        customVariantId:
-          type: string
-        shopifyVariantId:
-          type: string
-        bigcommerceVariantId:
-          type: string
-        title:
-          type: string
-        price:
-          type: string
-        sku:
-          type: string
         position:
           type: string
-        taxable:
+        altText:
           type: string
-        barcode:
+        width:
           type: string
-        grams:
+        height:
           type: string
-        weight:
-          type: string
-        weightUnit:
-          type: string
-        requiresShipping:
-          type: string
-        inventoryPolicy:
-          type: string
-        inventoryManagement:
-          type: string
-        inventoryQuantity:
+        urlSrc:
           type: string
   securitySchemes:
     StampedApiKeyAuth:

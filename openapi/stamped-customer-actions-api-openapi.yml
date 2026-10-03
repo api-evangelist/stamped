@@ -357,6 +357,33 @@ components:
       properties:
         message:
           type: string
+    RewardResponse:
+      type: object
+      properties:
+        rewardId:
+          type: string
+        activityId:
+          type: string
+        customerId:
+          type: string
+        status:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        couponCode:
+          type: string
+        category:
+          type: string
+        type:
+          type: string
+        value:
+          type: string
+        dateCreated:
+          type: string
+        dateOfExpiry:
+          type: string
     ActivityResponse:
       type: object
       properties:
@@ -403,33 +430,6 @@ components:
                   type: number
                 totalRefunded:
                   type: number
-    RewardResponse:
-      type: object
-      properties:
-        rewardId:
-          type: string
-        activityId:
-          type: string
-        customerId:
-          type: string
-        status:
-          type: string
-        title:
-          type: string
-        description:
-          type: string
-        couponCode:
-          type: string
-        category:
-          type: string
-        type:
-          type: string
-        value:
-          type: string
-        dateCreated:
-          type: string
-        dateOfExpiry:
-          type: string
   securitySchemes:
     StampedApiKeyAuth:
       type: apiKey

@@ -120,53 +120,6 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    PaginatedActivities:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        activities:
-          type: array
-          items:
-            $ref: '#/components/schemas/ActivityResponse'
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
-    RewardResponse:
-      type: object
-      properties:
-        rewardId:
-          type: string
-        activityId:
-          type: string
-        customerId:
-          type: string
-        status:
-          type: string
-        title:
-          type: string
-        description:
-          type: string
-        couponCode:
-          type: string
-        category:
-          type: string
-        type:
-          type: string
-        value:
-          type: string
-        dateCreated:
-          type: string
-        dateOfExpiry:
-          type: string
     ActivityResponse:
       type: object
       properties:
@@ -213,6 +166,53 @@ components:
                   type: number
                 totalRefunded:
                   type: number
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    PaginatedActivities:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        activities:
+          type: array
+          items:
+            $ref: '#/components/schemas/ActivityResponse'
+    RewardResponse:
+      type: object
+      properties:
+        rewardId:
+          type: string
+        activityId:
+          type: string
+        customerId:
+          type: string
+        status:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        couponCode:
+          type: string
+        category:
+          type: string
+        type:
+          type: string
+        value:
+          type: string
+        dateCreated:
+          type: string
+        dateOfExpiry:
+          type: string
     PaginatedRewards:
       type: object
       properties:

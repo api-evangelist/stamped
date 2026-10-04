@@ -364,66 +364,6 @@ components:
       properties:
         message:
           type: string
-    ProductRequest:
-      type: object
-      properties:
-        customProductId:
-          type: string
-        publishedScope:
-          type: string
-        status:
-          type: string
-        title:
-          type: string
-        htmlProductDescription:
-          type: string
-        vendor:
-          type: string
-        type:
-          type: string
-        handle:
-          type: string
-        datePublished:
-          type: string
-        datePlatformUpdated:
-          type: string
-        tags:
-          type: array
-          items:
-            type: string
-        variants:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductVariantRequest'
-        images:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductImage'
-    ProductVariantRequest:
-      type: object
-      properties:
-        customVariantId:
-          type: string
-        title:
-          type: string
-        price:
-          type: string
-        sku:
-          type: string
-        position:
-          type: string
-        taxable:
-          type: string
-        barcode:
-          type: string
-        weight:
-          type: string
-        weightUnit:
-          type: string
-        requiresShipping:
-          type: string
-        inventoryQuantity:
-          type: string
     PaginatedProducts:
       type: object
       properties:
@@ -439,6 +379,23 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductResponse'
+    ProductImage:
+      type: object
+      properties:
+        variantMatches:
+          type: array
+          items:
+            type: string
+        position:
+          type: string
+        altText:
+          type: string
+        width:
+          type: string
+        height:
+          type: string
+        urlSrc:
+          type: string
     ProductVariantResponse:
       type: object
       properties:
@@ -525,23 +482,66 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductImage'
-    ProductImage:
+    ProductVariantRequest:
       type: object
       properties:
-        variantMatches:
+        customVariantId:
+          type: string
+        title:
+          type: string
+        price:
+          type: string
+        sku:
+          type: string
+        position:
+          type: string
+        taxable:
+          type: string
+        barcode:
+          type: string
+        weight:
+          type: string
+        weightUnit:
+          type: string
+        requiresShipping:
+          type: string
+        inventoryQuantity:
+          type: string
+    ProductRequest:
+      type: object
+      properties:
+        customProductId:
+          type: string
+        publishedScope:
+          type: string
+        status:
+          type: string
+        title:
+          type: string
+        htmlProductDescription:
+          type: string
+        vendor:
+          type: string
+        type:
+          type: string
+        handle:
+          type: string
+        datePublished:
+          type: string
+        datePlatformUpdated:
+          type: string
+        tags:
           type: array
           items:
             type: string
-        position:
-          type: string
-        altText:
-          type: string
-        width:
-          type: string
-        height:
-          type: string
-        urlSrc:
-          type: string
+        variants:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductVariantRequest'
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductImage'
   securitySchemes:
     StampedApiKeyAuth:
       type: apiKey

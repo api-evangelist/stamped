@@ -393,29 +393,35 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    CustomerAddress:
+    ErrorMessage:
       type: object
       properties:
-        label:
+        message:
           type: string
-        phone:
+    CustomerNotification:
+      type: object
+      properties:
+        notificationType:
           type: string
-        address1:
+        referenceId:
           type: string
-        address2:
+        dateNotified:
           type: string
-        city:
-          type: string
-        province:
-          type: string
-        country:
-          type: string
-        countryCode:
-          type: string
-        zip:
-          type: string
-        default:
-          type: string
+    PaginatedCustomers:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        customers:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerResponse'
     CustomerResponse:
       type: object
       properties:
@@ -471,34 +477,28 @@ components:
             type: string
         activity:
           $ref: '#/components/schemas/CustomerActivity'
-    ErrorMessage:
+    CustomerAddress:
       type: object
       properties:
-        message:
+        label:
           type: string
-    PaginatedCustomers:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        customers:
-          type: array
-          items:
-            $ref: '#/components/schemas/CustomerResponse'
-    CustomerNotification:
-      type: object
-      properties:
-        notificationType:
+        phone:
           type: string
-        referenceId:
+        address1:
           type: string
-        dateNotified:
+        address2:
+          type: string
+        city:
+          type: string
+        province:
+          type: string
+        country:
+          type: string
+        countryCode:
+          type: string
+        zip:
+          type: string
+        default:
           type: string
     CustomerRequest:
       type: object

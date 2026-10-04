@@ -115,6 +115,9 @@ apis:
   - type: OpenAPI
     url: openapi/stamped-program-reporting-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/stamped-capability-edges.yml
+  name: Stamped Business Capability Map
 - type: Overlay
   url: overlays/stamped-loyalty-operations-overlay.yaml
 - type: DomainSecurity

@@ -43,7 +43,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-10-06'
 tags:
 - Company
 - Consumer
@@ -115,6 +115,8 @@ apis:
   - type: OpenAPI
     url: openapi/stamped-program-reporting-api-openapi.yml
 common:
+- url: https://website.stamped.io/feed/
+  type: BlogRSS
 - type: CapabilityMap
   url: capabilities/stamped-capability-edges.yml
   name: Stamped Business Capability Map

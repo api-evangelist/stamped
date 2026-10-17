@@ -296,13 +296,43 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    OrderCartRequest:
+    PaginatedOrders:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderResponse'
+    OrderRequest:
+      type: object
+      properties:
+        customOrderId:
+          type: string
+        customCustomerId:
+          type: string
+        customerId:
+          type: string
+        cart:
+          $ref: '#/components/schemas/OrderCartRequest'
+        tags:
+          type: array
+          items:
+            type: string
+    OrderCart:
       type: object
       properties:
         lineItems:
           type: array
           items:
-            $ref: '#/components/schemas/CartItemRequest'
+            $ref: '#/components/schemas/CartItem'
         financialStatus:
           type: string
         fulfillmentStatus:
@@ -311,6 +341,20 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/DiscountApplied'
+        customerCurrency:
+          type: string
+        customerPriceDiscountTotal:
+          type: string
+        customerPriceItemsTotal:
+          type: string
+        customerPriceSubTotal:
+          type: string
+        customerPriceTotal:
+          type: string
+        customerPriceShipping:
+          type: string
+        customerPriceTax:
+          type: string
         shopCurrency:
           type: string
         shopPriceDiscountTotal:
@@ -324,11 +368,6 @@ components:
         shopPriceShipping:
           type: string
         shopPriceTax:
-          type: string
-    ErrorMessage:
-      type: object
-      properties:
-        message:
           type: string
     CartItemRequest:
       type: object
@@ -412,48 +451,23 @@ components:
           type: array
           items:
             type: string
-    OrderCart:
+    DiscountApplied:
       type: object
       properties:
-        lineItems:
-          type: array
-          items:
-            $ref: '#/components/schemas/CartItem'
-        financialStatus:
+        code:
           type: string
-        fulfillmentStatus:
+        amount:
           type: string
-        discountsApplied:
-          type: array
-          items:
-            $ref: '#/components/schemas/DiscountApplied'
-        customerCurrency:
+        type:
           type: string
-        customerPriceDiscountTotal:
+    OrderEntry:
+      type: object
+      properties:
+        cartHash:
           type: string
-        customerPriceItemsTotal:
+        event:
           type: string
-        customerPriceSubTotal:
-          type: string
-        customerPriceTotal:
-          type: string
-        customerPriceShipping:
-          type: string
-        customerPriceTax:
-          type: string
-        shopCurrency:
-          type: string
-        shopPriceDiscountTotal:
-          type: string
-        shopPriceItemsTotal:
-          type: string
-        shopPriceSubTotal:
-          type: string
-        shopPriceTotal:
-          type: string
-        shopPriceShipping:
-          type: string
-        shopPriceTax:
+        date:
           type: string
     CartItem:
       type: object
@@ -492,53 +506,39 @@ components:
           type: string
         taxable:
           type: string
-    PaginatedOrders:
+    ErrorMessage:
       type: object
       properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        orders:
+        message:
+          type: string
+    OrderCartRequest:
+      type: object
+      properties:
+        lineItems:
           type: array
           items:
-            $ref: '#/components/schemas/OrderResponse'
-    DiscountApplied:
-      type: object
-      properties:
-        code:
+            $ref: '#/components/schemas/CartItemRequest'
+        financialStatus:
           type: string
-        amount:
+        fulfillmentStatus:
           type: string
-        type:
-          type: string
-    OrderRequest:
-      type: object
-      properties:
-        customOrderId:
-          type: string
-        customCustomerId:
-          type: string
-        customerId:
-          type: string
-        cart:
-          $ref: '#/components/schemas/OrderCartRequest'
-        tags:
+        discountsApplied:
           type: array
           items:
-            type: string
-    OrderEntry:
-      type: object
-      properties:
-        cartHash:
+            $ref: '#/components/schemas/DiscountApplied'
+        shopCurrency:
           type: string
-        event:
+        shopPriceDiscountTotal:
           type: string
-        date:
+        shopPriceItemsTotal:
+          type: string
+        shopPriceSubTotal:
+          type: string
+        shopPriceTotal:
+          type: string
+        shopPriceShipping:
+          type: string
+        shopPriceTax:
           type: string
   securitySchemes:
     StampedApiKeyAuth:

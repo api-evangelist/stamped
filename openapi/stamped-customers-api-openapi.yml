@@ -393,35 +393,71 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    ErrorMessage:
+    CustomerActivity:
       type: object
       properties:
-        message:
+        vipTier:
           type: string
-    CustomerNotification:
+        dateVipTierUpdated:
+          type: string
+        totalPoints:
+          type: string
+        dateTotalPointsUpdated:
+          type: string
+        totalAffiliateOrders:
+          type: string
+        dateAffiliateOrdersUpdated:
+          type: string
+        totalReviews:
+          type: string
+        dateReviewsUpdated:
+          type: string
+    CustomerRequest:
       type: object
       properties:
-        notificationType:
+        email:
           type: string
-        referenceId:
+        customCustomerId:
           type: string
-        dateNotified:
+        firstName:
           type: string
-    PaginatedCustomers:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        customers:
+        lastName:
+          type: string
+        dateOfBirth:
+          type: string
+        datePlatformUpdated:
+          type: string
+        tags:
           type: array
           items:
-            $ref: '#/components/schemas/CustomerResponse'
+            type: string
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/CustomerAddress'
+    CustomerAddress:
+      type: object
+      properties:
+        label:
+          type: string
+        phone:
+          type: string
+        address1:
+          type: string
+        address2:
+          type: string
+        city:
+          type: string
+        province:
+          type: string
+        country:
+          type: string
+        countryCode:
+          type: string
+        zip:
+          type: string
+        default:
+          type: string
     CustomerResponse:
       type: object
       properties:
@@ -477,70 +513,34 @@ components:
             type: string
         activity:
           $ref: '#/components/schemas/CustomerActivity'
-    CustomerAddress:
+    CustomerNotification:
       type: object
       properties:
-        label:
+        notificationType:
           type: string
-        phone:
+        referenceId:
           type: string
-        address1:
+        dateNotified:
           type: string
-        address2:
-          type: string
-        city:
-          type: string
-        province:
-          type: string
-        country:
-          type: string
-        countryCode:
-          type: string
-        zip:
-          type: string
-        default:
-          type: string
-    CustomerRequest:
+    PaginatedCustomers:
       type: object
       properties:
-        email:
-          type: string
-        customCustomerId:
-          type: string
-        firstName:
-          type: string
-        lastName:
-          type: string
-        dateOfBirth:
-          type: string
-        datePlatformUpdated:
-          type: string
-        tags:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        customers:
           type: array
           items:
-            type: string
-        addresses:
-          type: array
-          items:
-            $ref: '#/components/schemas/CustomerAddress'
-    CustomerActivity:
+            $ref: '#/components/schemas/CustomerResponse'
+    ErrorMessage:
       type: object
       properties:
-        vipTier:
-          type: string
-        dateVipTierUpdated:
-          type: string
-        totalPoints:
-          type: string
-        dateTotalPointsUpdated:
-          type: string
-        totalAffiliateOrders:
-          type: string
-        dateAffiliateOrdersUpdated:
-          type: string
-        totalReviews:
-          type: string
-        dateReviewsUpdated:
+        message:
           type: string
   securitySchemes:
     StampedApiKeyAuth:

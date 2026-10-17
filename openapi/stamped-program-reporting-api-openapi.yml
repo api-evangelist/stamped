@@ -120,57 +120,6 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    ActivityResponse:
-      type: object
-      properties:
-        activityId:
-          type: string
-        customerId:
-          type: string
-        dateCreated:
-          type: string
-        rule:
-          type: object
-          properties:
-            category:
-              type: string
-            type:
-              type: string
-            title:
-              type: string
-            description:
-              type: string
-        activity:
-          type: object
-          properties:
-            pointsDebit:
-              type: number
-            pointsCredit:
-              type: number
-            event:
-              type: string
-            orderId:
-              type: string
-            orderBreakdown:
-              type: object
-              properties:
-                totalSpent:
-                  type: number
-                totalSpentWithExclusions:
-                  type: number
-                totalShipping:
-                  type: number
-                totalTax:
-                  type: number
-                totalDiscount:
-                  type: number
-                totalRefunded:
-                  type: number
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
     PaginatedActivities:
       type: object
       properties:
@@ -228,6 +177,57 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/RewardResponse'
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
+    ActivityResponse:
+      type: object
+      properties:
+        activityId:
+          type: string
+        customerId:
+          type: string
+        dateCreated:
+          type: string
+        rule:
+          type: object
+          properties:
+            category:
+              type: string
+            type:
+              type: string
+            title:
+              type: string
+            description:
+              type: string
+        activity:
+          type: object
+          properties:
+            pointsDebit:
+              type: number
+            pointsCredit:
+              type: number
+            event:
+              type: string
+            orderId:
+              type: string
+            orderBreakdown:
+              type: object
+              properties:
+                totalSpent:
+                  type: number
+                totalSpentWithExclusions:
+                  type: number
+                totalShipping:
+                  type: number
+                totalTax:
+                  type: number
+                totalDiscount:
+                  type: number
+                totalRefunded:
+                  type: number
   securitySchemes:
     StampedApiKeyAuth:
       type: apiKey

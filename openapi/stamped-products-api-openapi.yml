@@ -359,43 +359,6 @@ paths:
                 $ref: '#/components/schemas/ErrorMessage'
 components:
   schemas:
-    ErrorMessage:
-      type: object
-      properties:
-        message:
-          type: string
-    PaginatedProducts:
-      type: object
-      properties:
-        page:
-          type: number
-        limit:
-          type: number
-        morePages:
-          type: boolean
-        subset:
-          type: boolean
-        products:
-          type: array
-          items:
-            $ref: '#/components/schemas/ProductResponse'
-    ProductImage:
-      type: object
-      properties:
-        variantMatches:
-          type: array
-          items:
-            type: string
-        position:
-          type: string
-        altText:
-          type: string
-        width:
-          type: string
-        height:
-          type: string
-        urlSrc:
-          type: string
     ProductVariantResponse:
       type: object
       properties:
@@ -542,6 +505,43 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ProductImage'
+    PaginatedProducts:
+      type: object
+      properties:
+        page:
+          type: number
+        limit:
+          type: number
+        morePages:
+          type: boolean
+        subset:
+          type: boolean
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/ProductResponse'
+    ProductImage:
+      type: object
+      properties:
+        variantMatches:
+          type: array
+          items:
+            type: string
+        position:
+          type: string
+        altText:
+          type: string
+        width:
+          type: string
+        height:
+          type: string
+        urlSrc:
+          type: string
+    ErrorMessage:
+      type: object
+      properties:
+        message:
+          type: string
   securitySchemes:
     StampedApiKeyAuth:
       type: apiKey

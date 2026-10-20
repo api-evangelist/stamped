@@ -6,6 +6,7 @@ source:
 - https://composio.dev/toolkits/stamped
 - https://monid.ai/tools/stamped
 checked:
+- gorgias/integrations/gorgias-integration-edges.yml
 - https://composio.dev/toolkits/stamped
 - https://github.com/meltano/hub
 - https://monid.ai/tools/stamped
@@ -69,4 +70,20 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: Gorgias (own)
+  partner: gorgias
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.gorgias.com/apps/stamped-io-reviews-and-ratings
+  mirror_of: gorgias/integrations/gorgias-integration-edges.yml
+  apps:
+  - Stamped.io Reviews and Ratings
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
 templates: []
